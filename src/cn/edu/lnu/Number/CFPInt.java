@@ -5,5 +5,5 @@ package cn.edu.lnu.Number;
  * Created by yuanx on 2016/10/12.
  */
 public class CFPInt {
-    Integer aInt;
+    int aInt;
 }

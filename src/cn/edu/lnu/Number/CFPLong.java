@@ -5,6 +5,8 @@ package cn.edu.lnu.Number;
  * @author youlingwangzi
  */
 public class CFPLong {
-    Long aLong;
+    long aLong;
+
+
 
 }
