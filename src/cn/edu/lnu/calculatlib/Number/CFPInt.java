@@ -1,4 +1,4 @@
-package cn.edu.lnu.Number;
+package cn.edu.lnu.calculatlib.Number;
 
 /**
  * @author yuanxiaokun
