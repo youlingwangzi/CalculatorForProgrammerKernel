@@ -116,14 +116,14 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>,CFPLogicOperati
     @Override
     public CFPInteger lsl(CFPInteger a) {
         this.integerNumber =
-                this.integerNumber >>> a.getIntegerNumber() | this.integerNumber << (64 - a.getIntegerNumber());
+                this.integerNumber >>> a.getIntegerNumber() | this.integerNumber << (32 - a.getIntegerNumber());
         return this;
     }
 
     @Override
     public CFPInteger lsr(CFPInteger a) {
         this.integerNumber =
-                this.integerNumber << a.getIntegerNumber() | this.integerNumber >>> (64 - a.getIntegerNumber());
+                this.integerNumber << a.getIntegerNumber() | this.integerNumber >>> (32 - a.getIntegerNumber());
         return this;
     }
 
