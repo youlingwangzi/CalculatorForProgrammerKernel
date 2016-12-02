@@ -1,8 +1,8 @@
 package cn.edu.lnu.calculatlib.Number;
 
 /**
- * @author yuanxiaokun
  * Created by yuanx on 2016/10/12.
+ * @author yuanxiaokun
  */
 public class CFPInteger implements CFPBaseOperation <CFPInteger>,CFPLogicOperation<CFPInteger> {
     private Integer integerNumber;
@@ -74,7 +74,7 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>,CFPLogicOperati
     @Override
     public CFPInteger div(CFPInteger a) {
         this.integerNumber /= a.getIntegerNumber();
-        return null;
+        return this;
     }
 
     @Override
