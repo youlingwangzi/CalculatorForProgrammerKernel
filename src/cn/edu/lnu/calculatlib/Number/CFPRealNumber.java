@@ -13,8 +13,8 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
     private long octScale = 20;
     private long hexScale = 20;
 
-    public CFPRealNumber(){
-        bigDecimalNumber = new BigDecimal("1");
+    public CFPRealNumber(String s){
+        bigDecimalNumber = new BigDecimal(s);
     }
 
     public void setBinatyScale(long binatyScale) {

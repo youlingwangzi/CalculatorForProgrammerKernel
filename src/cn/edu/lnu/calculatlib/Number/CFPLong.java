@@ -57,7 +57,7 @@ public class CFPLong implements CFPBaseOperation<CFPLong>,
     }
 
     public CFPRealNumber toCFPRealNumber(){
-        return new CFPRealNumber();
+        return new CFPRealNumber(longNumber.toString());
     }
 
     @Override

@@ -79,7 +79,7 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
     }
 
     public CFPRealNumber toCFPRealNumber(){
-        return new CFPRealNumber();
+        return new CFPRealNumber(shortNumber.toString());
     }
 
     @Override

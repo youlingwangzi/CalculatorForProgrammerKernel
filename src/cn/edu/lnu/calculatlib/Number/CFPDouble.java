@@ -50,7 +50,7 @@ public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion
     }
 
     public CFPRealNumber toCFPRealNumber(){
-        return new CFPRealNumber();
+        return new CFPRealNumber(doubleNumber.toString());
     }
 
     @Override

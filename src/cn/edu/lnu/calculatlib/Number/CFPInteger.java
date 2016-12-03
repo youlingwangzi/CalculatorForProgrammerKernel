@@ -56,7 +56,7 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>,
     }
 
     public CFPRealNumber toCFPRealNumber(){
-        return new CFPRealNumber();
+        return new CFPRealNumber(integerNumber.toString());
     }
 
     @Override

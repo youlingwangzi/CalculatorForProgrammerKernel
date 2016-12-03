@@ -80,7 +80,7 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
     }
 
     public CFPRealNumber toCFPRealNumber(){
-        return new CFPRealNumber();
+        return new CFPRealNumber(byteNumbger.toString());
     }
 
     @Override

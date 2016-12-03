@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ca95676-4a3f-4c84-8f1a-69ec55bd8b5f" name="Default" comment="完成浮点型实数类。">
+    <list default="true" id="0ca95676-4a3f-4c84-8f1a-69ec55bd8b5f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/Main.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPByte.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPByte.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPDouble.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPDouble.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPFloat.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPFloat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPInteger.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPInteger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLong.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLong.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java" />
     </list>
     <ignored path="CalculateLib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,28 +30,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CFPRealNumber.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java">
+      <file leaf-file-name="CFPFloat.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPFloat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+            <state relative-caret-position="345">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#584#585#0" expanded="true" />
-                <element signature="e#630#631#0" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-                <element signature="e#716#717#0" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
-                <element signature="method#toHexNumber#0;class#CFPRealNumber#0" expanded="false" />
-                <element signature="e#2721#2722#0" expanded="true" />
-                <element signature="e#2771#2772#0" expanded="true" />
-                <element signature="e#5720#5721#0" expanded="true" />
-                <element signature="e#5747#5748#0" expanded="true" />
-                <element signature="e#5794#5795#0" expanded="true" />
-                <element signature="e#5833#5834#0" expanded="true" />
-                <element signature="e#5901#5902#0" expanded="true" />
-                <element signature="e#5957#5958#0" expanded="true" />
+                <element signature="e#1273#1274#0" expanded="true" />
+                <element signature="e#1337#1338#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CFPShort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="81" column="55" lean-forward="false" selection-start-line="81" selection-start-column="55" selection-end-line="81" selection-end-column="55" />
+              <folding>
+                <element signature="e#2207#2208#0" expanded="true" />
+                <element signature="e#2241#2242#0" expanded="true" />
+                <element signature="e#2385#2386#0" expanded="true" />
+                <element signature="e#2449#2450#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CFPByte.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPByte.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="82" column="55" lean-forward="false" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
+              <folding>
+                <element signature="e#2386#2387#0" expanded="true" />
+                <element signature="e#2450#2451#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CFPDouble.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPDouble.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="52" column="56" lean-forward="false" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+              <folding>
+                <element signature="e#1291#1292#0" expanded="true" />
+                <element signature="e#1356#1357#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,15 +124,15 @@
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLogicOperation.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRadixConversion.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLong.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBeChangedByBinary.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/lnu/Main.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLong.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPInteger.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPByte.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPDouble.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPFloat.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/lnu/Main.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" />
       </list>
     </option>
   </component>
@@ -594,7 +626,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480769023755</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="完成实数类。">
+      <created>1480774864395</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1480774864395</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -673,7 +712,8 @@
     <MESSAGE value="完善类组织。" />
     <MESSAGE value="完成整型数据类型类。" />
     <MESSAGE value="完成浮点型实数类。" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成浮点型实数类。" />
+    <MESSAGE value="完成实数类。" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成实数类。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -878,13 +918,6 @@
     <entry file="file://$PROJECT_DIR$/out/production/CalculateLib/cn/edu/lnu/calculatlib/DataType.class" />
     <entry file="file://$PROJECT_DIR$/out/production/CalculateLib/cn/edu/lnu/calculatlib/CFPNumber.class" />
     <entry file="file://$PROJECT_DIR$/out/production/CalculateLib/cn/edu/lnu/Main.class" />
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/CalculateLib/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.class" />
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRadixConversion.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -901,52 +934,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
-          <folding>
-            <element signature="e#1259#1260#0" expanded="false" />
-            <element signature="e#1295#1296#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLong.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-          <folding>
-            <element signature="e#1060#1061#0" expanded="false" />
-            <element signature="e#1093#1094#0" expanded="false" />
-            <element signature="e#1379#1380#0" expanded="false" />
-            <element signature="e#1421#1422#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPDouble.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="75" column="42" lean-forward="true" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
-          <folding>
-            <element signature="e#343#344#0" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
-            <element signature="e#461#462#0" expanded="false" />
-            <element signature="e#507#508#0" expanded="false" />
-            <element signature="e#556#557#0" expanded="false" />
-            <element signature="e#636#637#0" expanded="false" />
-            <element signature="e#685#686#0" expanded="false" />
-            <element signature="e#766#767#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -965,25 +957,6 @@
         <state relative-caret-position="90">
           <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPByte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPFloat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#1273#1274#0" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1007,25 +980,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        <state relative-caret-position="240">
+          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
             <element signature="method#toHexNumber#0;class#CFPRealNumber#0" expanded="false" />
-            <element signature="e#2721#2722#0" expanded="true" />
-            <element signature="e#2771#2772#0" expanded="true" />
-            <element signature="e#5720#5721#0" expanded="true" />
-            <element signature="e#5747#5748#0" expanded="true" />
-            <element signature="e#5794#5795#0" expanded="true" />
-            <element signature="e#5833#5834#0" expanded="true" />
-            <element signature="e#5901#5902#0" expanded="true" />
-            <element signature="e#5957#5958#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLong.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="59" column="54" lean-forward="false" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
+          <folding>
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="58" column="57" lean-forward="false" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+          <folding>
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1295#1296#0" expanded="true" />
+            <element signature="e#1449#1450#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="81" column="55" lean-forward="false" selection-start-line="81" selection-start-column="55" selection-end-line="81" selection-end-column="55" />
+          <folding>
+            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2241#2242#0" expanded="true" />
+            <element signature="e#2385#2386#0" expanded="true" />
+            <element signature="e#2449#2450#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPByte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="82" column="55" lean-forward="false" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
+          <folding>
+            <element signature="e#2386#2387#0" expanded="true" />
+            <element signature="e#2450#2451#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPDouble.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="52" column="56" lean-forward="false" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+          <folding>
+            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1356#1357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPFloat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#1273#1274#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
           </folding>
         </state>
       </provider>

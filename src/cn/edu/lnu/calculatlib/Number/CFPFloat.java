@@ -51,7 +51,7 @@ public class CFPFloat implements CFPRadixConversion, CFPBaseOperation<CFPFloat> 
     }
 
     public CFPRealNumber toCFPRealNumber(){
-        return new CFPRealNumber();
+        return new CFPRealNumber(floatNumber.toString());
     }
 
     @Override
