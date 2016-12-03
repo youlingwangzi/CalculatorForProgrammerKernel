@@ -4,27 +4,42 @@ package cn.edu.lnu.calculatlib.Number;
  * Created by youlingwangzi on 2016/10/2.
  * @author youlingwangzi
  */
-public class CFPLong implements CFPBaseOperation<CFPLong>,CFPLogicOperation<CFPLong>{
+public class CFPLong implements CFPBaseOperation<CFPLong>,
+        CFPLogicOperation<CFPLong>, CFPRadixConversion{
     private Long longNumber;
 
     public CFPLong(long a) {
         longNumber = a;
     }
 
+    @Override
     public String toHexString(){
         return Long.toHexString(longNumber);
     }
 
+    @Override
     public String toDecString(){
         return longNumber.toString();
     }
 
+    @Override
     public String toOctString(){
         return Long.toOctalString(longNumber);
     }
 
+    @Override
     public String toBinString(){
         return Long.toBinaryString(longNumber);
+    }
+
+    @Override
+    public String toFullBinatyString(){
+        StringBuilder stringBuilder = new StringBuilder(Long.toBinaryString(longNumber));
+        int n = 64 - stringBuilder.length();
+        while (n-- != 0){
+            stringBuilder.insert(0,"0");
+        }
+        return stringBuilder.toString();
     }
 
     public Long getLongNumber() {
@@ -35,14 +50,6 @@ public class CFPLong implements CFPBaseOperation<CFPLong>,CFPLogicOperation<CFPL
         this.longNumber = longNumber;
     }
 
-    public String toFullBinatyString(){
-        StringBuilder stringBuilder = new StringBuilder(Long.toBinaryString(longNumber));
-        int n = 64 - stringBuilder.length();
-        while (n-- != 0){
-            stringBuilder.insert(0,"0");
-        }
-        return stringBuilder.toString();
-    }
 
     public CFPLong parseUnsignedInt(String s, int radix){
         this.longNumber = Long.parseUnsignedLong(s, radix);

@@ -4,29 +4,35 @@ package cn.edu.lnu.calculatlib.Number;
  * Created by yuanx on 2016/10/12.
  * @author yuanxiaokun
  */
-public class CFPInteger implements CFPBaseOperation <CFPInteger>,CFPLogicOperation<CFPInteger> {
+public class CFPInteger implements CFPBaseOperation <CFPInteger>,
+        CFPLogicOperation<CFPInteger>, CFPRadixConversion {
     private Integer integerNumber;
 
     public CFPInteger(int a){
         integerNumber = a;
     }
 
+    @Override
     public String toHexString(){
         return Integer.toHexString(integerNumber);
     }
 
+    @Override
     public String toDecString(){
         return integerNumber.toString();
     }
 
+    @Override
     public String toOctString(){
         return Integer.toOctalString(integerNumber);
     }
 
+    @Override
     public String toBinString(){
         return Integer.toBinaryString(integerNumber);
     }
 
+    @Override
     public String toFullBinatyString(){
         StringBuilder stringBuilder = new StringBuilder(Integer.toBinaryString(integerNumber));
         int n = 32 - stringBuilder.length();
@@ -41,16 +47,16 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>,CFPLogicOperati
         return this;
     }
 
-    public CFPRealNumber toCFPRealNumber(){
-        return new CFPRealNumber();
-    }
-
     public Integer getIntegerNumber() {
         return integerNumber;
     }
 
     public void setIntegerNumber(Integer integerNumber) {
         this.integerNumber = integerNumber;
+    }
+
+    public CFPRealNumber toCFPRealNumber(){
+        return new CFPRealNumber();
     }
 
     @Override
