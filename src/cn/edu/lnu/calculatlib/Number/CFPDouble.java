@@ -33,31 +33,53 @@ public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion
 
     @Override
     public String toFullBinatyString() {
-        return null;
+        StringBuilder stringBuilder = new StringBuilder(this.toBinString());
+        int n = 64 - stringBuilder.length();
+        while (n-- != 0){
+            stringBuilder.insert(0,"0");
+        }
+        return stringBuilder.toString();
+    }
+
+    public Double getDoubleNumber() {
+        return doubleNumber;
+    }
+
+    public void setDoubleNumber(Double doubleNumber) {
+        this.doubleNumber = doubleNumber;
+    }
+
+    public CFPRealNumber toCFPRealNumber(){
+        return new CFPRealNumber();
     }
 
     @Override
     public CFPDouble add(CFPDouble a) {
-        return null;
+        this.doubleNumber += a.getDoubleNumber();
+        return this;
     }
 
     @Override
     public CFPDouble sub(CFPDouble a) {
-        return null;
+        this.doubleNumber -= a.getDoubleNumber();
+        return this;
     }
 
     @Override
     public CFPDouble mul(CFPDouble a) {
-        return null;
+        this.doubleNumber *= a.getDoubleNumber();
+        return this;
     }
 
     @Override
     public CFPDouble div(CFPDouble a) {
-        return null;
+        this.doubleNumber /= a.getDoubleNumber();
+        return this;
     }
 
     @Override
     public CFPDouble opp() {
-        return null;
+        this.doubleNumber = -this.doubleNumber;
+        return this;
     }
 }

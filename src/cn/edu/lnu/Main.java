@@ -1,9 +1,8 @@
 package cn.edu.lnu;
 
-import cn.edu.lnu.calculatlib.Number.CFPBaseOperation;
-import cn.edu.lnu.calculatlib.Number.CFPByte;
-import cn.edu.lnu.calculatlib.Number.CFPDouble;
-import cn.edu.lnu.calculatlib.Number.CFPShort;
+import cn.edu.lnu.calculatlib.Number.*;
+
+import java.math.BigDecimal;
 
 public class Main {
 
@@ -18,7 +17,7 @@ public class Main {
         System.out.println(cfpShort1.toFullBinatyString());
         System.out.println(cfpShort1.parseUnsignedShort("1111111111101111",2).toDecString());*/
 
-        CFPByte cfpShort1 = new CFPByte((byte)111);
+/*        CFPByte cfpShort1 = new CFPByte((byte)111);
         System.out.println("hex："+cfpShort1.toHexString());
         System.out.println("dec："+cfpShort1.toDecString());
         System.out.println("oct："+cfpShort1.toOctString());
@@ -26,10 +25,17 @@ public class Main {
         System.out.println("full："+cfpShort1.toFullBinatyString());
         System.out.println("s to byte："+cfpShort1.parseUnsignedByte("1101111",2).toDecString());
 
-        CFPDouble cfpDouble = new CFPDouble(108798.123);
+        CFPDouble cfpDouble = new CFPDouble(-608798.123);
         System.out.println("hex："+cfpDouble.toHexString());
         System.out.println("dec："+cfpDouble.toDecString());
         System.out.println("oct："+cfpDouble.toOctString());
-        System.out.println("bin："+cfpDouble.toBinString());
+        System.out.println("bin："+cfpDouble.toBinString());*/
+
+        CFPRealNumber cfpRealNumber = new CFPRealNumber();
+        cfpRealNumber.setBigDecimalNumber(new BigDecimal("1342.0"));
+        System.out.println("hex："+cfpRealNumber.toHexString());
+        System.out.println("dec："+cfpRealNumber.toDecString());
+        System.out.println("oct："+cfpRealNumber.toOctString());
+        System.out.println("bin："+cfpRealNumber.toBinString());
     }
 }
