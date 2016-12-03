@@ -5,5 +5,17 @@ package cn.edu.lnu.calculatlib;
  * @author youlingwangzi
  */
 public enum DataType {
-    LONG,INTEGER,SHORT,BYTE,REAL_NUMBER,DOUBLE,FLOAT
+    LONG,INTEGER,SHORT,BYTE,REAL_NUMBER,DOUBLE,FLOAT;
+
+    public boolean isIntegersType(){
+        return ordinal()<4;
+    }
+
+    public boolean isDecimalType(){
+        return ordinal()>4;
+    }
+
+    public boolean isRealNumber(){
+        return ordinal() == 4;
+    }
 }
