@@ -32,10 +32,11 @@ public class Main {
         System.out.println("bin："+cfpDouble.toBinString());*/
 
         CFPRealNumber cfpRealNumber = new CFPRealNumber();
-        cfpRealNumber.setBigDecimalNumber(new BigDecimal("1342.0"));
+        cfpRealNumber.setBigDecimalNumber(new BigDecimal("1342.5"));
         System.out.println("hex："+cfpRealNumber.toHexString());
         System.out.println("dec："+cfpRealNumber.toDecString());
         System.out.println("oct："+cfpRealNumber.toOctString());
         System.out.println("bin："+cfpRealNumber.toBinString());
+
     }
 }

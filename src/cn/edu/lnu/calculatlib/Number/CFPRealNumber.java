@@ -11,9 +11,22 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
     private BigDecimal bigDecimalNumber;
     private long binatyScale = 20;
     private long octScale = 20;
+    private long hexScale = 20;
 
     public CFPRealNumber(){
         bigDecimalNumber = new BigDecimal("1");
+    }
+
+    public void setBinatyScale(long binatyScale) {
+        this.binatyScale = binatyScale;
+    }
+
+    public void setHexScale(long hexScale) {
+        this.hexScale = hexScale;
+    }
+
+    public void setOctScale(long octScale) {
+        this.octScale = octScale;
     }
 
     @Override
@@ -42,7 +55,7 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
             i = decimalPart.multiply(new BigDecimal("16")).intValue();
             decimalPart = decimalPart.multiply(new BigDecimal("16")).subtract(new BigDecimal(Integer.toString(i)));
             s2.append(toHexNumber((byte) i));
-        }while (++j < octScale);
+        }while (++j < hexScale);
 
         for(j = s2.length()-1; j>=0; j--) {
             if (s2.charAt(j) == '0')
@@ -190,26 +203,62 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
     @Override
     public CFPRealNumber add(CFPRealNumber a) {
-        return null;
+        this.bigDecimalNumber = this.bigDecimalNumber.add(a.getBigDecimalNumber());
+        return this;
     }
 
     @Override
     public CFPRealNumber sub(CFPRealNumber a) {
-        return null;
+        this.bigDecimalNumber = this.bigDecimalNumber.subtract(a.getBigDecimalNumber());
+        return this;
     }
 
     @Override
     public CFPRealNumber mul(CFPRealNumber a) {
-        return null;
+        this.bigDecimalNumber = this.bigDecimalNumber.multiply(a.getBigDecimalNumber());
+        return this;
     }
 
     @Override
     public CFPRealNumber div(CFPRealNumber a) {
-        return null;
+        this.bigDecimalNumber = this.bigDecimalNumber.divide(a.getBigDecimalNumber());
+        return this;
     }
 
     @Override
     public CFPRealNumber opp() {
-        return null;
+        this.bigDecimalNumber = this.bigDecimalNumber.multiply(new BigDecimal("-1"));
+        return this;
     }
+
+    public CFPLong toCFPLong(){
+        CFPLong cfpLong = new CFPLong(bigDecimalNumber.longValue());
+        return cfpLong;
+    }
+
+    public CFPInteger toCFPIteger(){
+        CFPInteger cfpInteger = new CFPInteger(bigDecimalNumber.intValue());
+        return cfpInteger;
+    }
+
+    public CFPShort toCFPShort(){
+        CFPShort cfpShort = new CFPShort(bigDecimalNumber.shortValue());
+        return cfpShort;
+    }
+
+    public CFPByte toCFPByte(){
+        CFPByte cfpByte = new CFPByte(bigDecimalNumber.byteValue());
+        return cfpByte;
+    }
+
+    public CFPDouble toCFPDouble(){
+        CFPDouble cfpDouble = new CFPDouble(bigDecimalNumber.doubleValue());
+        return cfpDouble;
+    }
+
+    public CFPFloat toCFPFloat(){
+        CFPFloat cfpFloat = new CFPFloat(bigDecimalNumber.floatValue());
+        return cfpFloat;
+    }
+
 }
