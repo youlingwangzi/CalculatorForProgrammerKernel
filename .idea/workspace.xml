@@ -1,82 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ca95676-4a3f-4c84-8f1a-69ec55bd8b5f" name="Default" comment="完成接口的注释。">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/allclasses-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/allclasses-noframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/Main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/CFPDataType.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/CFPNumber.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPByte.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPDouble.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPFloat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPInteger.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPLogicOperation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPLong.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPRadixConversion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPRealNumber.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPShort.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/class-use/CFPBaseOperation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/class-use/CFPByte.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/class-use/CFPDouble.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/class-use/CFPFloat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/class-use/CFPInteger.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/class-use/CFPLogicOperation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/class-use/CFPLong.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/class-use/CFPRadixConversion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/class-use/CFPRealNumber.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/class-use/CFPShort.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/class-use/CFPDataType.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/class-use/CFPNumber.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/class-use/Main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/constant-values.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/deprecated-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/help-doc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-10.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-11.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-12.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-13.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-14.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-15.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-16.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-17.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-18.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-7.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-8.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index-files/index-9.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/overview-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/overview-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/overview-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/package-list" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LibDoc/stylesheet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="0ca95676-4a3f-4c84-8f1a-69ec55bd8b5f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/Main.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLogicOperation.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLogicOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRadixConversion.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRadixConversion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" />
     </list>
     <ignored path="CalculateLib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,11 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CFPLogicOperation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CFPLogicOperation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLogicOperation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
               <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -736,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480818372662</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="完成接口的注释。生成文档。">
+      <created>1480823192529</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1480823192529</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -758,7 +701,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33052278" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33052278" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -820,7 +763,8 @@
     <MESSAGE value="完善枚举类，添加数据类型判断。完成主数据类框架。" />
     <MESSAGE value="更改数据类型枚举类的类名。" />
     <MESSAGE value="完成预定所有基础建设。进入注释编写和测试。" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成预定所有基础建设。进入注释编写和测试。" />
+    <MESSAGE value="完成接口的注释。生成文档。" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成接口的注释。生成文档。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -833,13 +777,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -1210,6 +1147,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
