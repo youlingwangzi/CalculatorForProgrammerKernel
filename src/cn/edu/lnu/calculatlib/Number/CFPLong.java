@@ -51,7 +51,7 @@ public class CFPLong implements CFPBaseOperation<CFPLong>,
     }
 
 
-    public CFPLong parseUnsignedInt(String s, int radix){
+    public CFPLong parseUnsignedLong(String s, int radix){
         this.longNumber = Long.parseUnsignedLong(s, radix);
         return this;
     }

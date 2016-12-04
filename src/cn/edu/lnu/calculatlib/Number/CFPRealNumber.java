@@ -51,7 +51,7 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
         s2.append('.');
         do{
-            int i = 0;
+            int i;
             i = decimalPart.multiply(new BigDecimal("16")).intValue();
             decimalPart = decimalPart.multiply(new BigDecimal("16")).subtract(new BigDecimal(Integer.toString(i)));
             s2.append(toHexNumber((byte) i));
@@ -119,7 +119,7 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
         s2.append('.');
         do{
-            int i = 0;
+            int i;
             i = decimalPart.multiply(new BigDecimal("8")).intValue();
             decimalPart = decimalPart.multiply(new BigDecimal("8")).subtract(new BigDecimal(Integer.toString(i)));
             s2.append(i);
@@ -157,7 +157,7 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
         s.append('.');
         do{
-            int i = 0;
+            int i;
             i = decimalPart.multiply(new BigDecimal("2")).intValue();
             decimalPart = decimalPart.multiply(new BigDecimal("2")).subtract(new BigDecimal(Integer.toString(i)));
             s.append(i);
@@ -180,7 +180,7 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         BigInteger integerPart = bigDecimalNumber.toBigInteger();
         StringBuilder s = new StringBuilder("");
         do{
-            int i = 0;
+            int i;
             i = integerPart.mod(new BigInteger("2")).intValue();
             integerPart = integerPart.divide(new BigInteger("2"));
             s.insert(0,i);
@@ -197,8 +197,8 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         return bigDecimalNumber;
     }
 
-    public void setBigDecimalNumber(BigDecimal bigDecimalNumber) {
-        this.bigDecimalNumber = bigDecimalNumber;
+    public void setBigDecimalNumber(String bigDecimalNumber) {
+        this.bigDecimalNumber = new BigDecimal(bigDecimalNumber);
     }
 
     @Override
@@ -232,33 +232,27 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
     }
 
     public CFPLong toCFPLong(){
-        CFPLong cfpLong = new CFPLong(bigDecimalNumber.longValue());
-        return cfpLong;
+        return new CFPLong(bigDecimalNumber.longValue());
     }
 
     public CFPInteger toCFPIteger(){
-        CFPInteger cfpInteger = new CFPInteger(bigDecimalNumber.intValue());
-        return cfpInteger;
+        return new CFPInteger(bigDecimalNumber.intValue());
     }
 
     public CFPShort toCFPShort(){
-        CFPShort cfpShort = new CFPShort(bigDecimalNumber.shortValue());
-        return cfpShort;
+        return new CFPShort(bigDecimalNumber.shortValue());
     }
 
     public CFPByte toCFPByte(){
-        CFPByte cfpByte = new CFPByte(bigDecimalNumber.byteValue());
-        return cfpByte;
+        return new CFPByte(bigDecimalNumber.byteValue());
     }
 
     public CFPDouble toCFPDouble(){
-        CFPDouble cfpDouble = new CFPDouble(bigDecimalNumber.doubleValue());
-        return cfpDouble;
+        return new CFPDouble(bigDecimalNumber.doubleValue());
     }
 
     public CFPFloat toCFPFloat(){
-        CFPFloat cfpFloat = new CFPFloat(bigDecimalNumber.floatValue());
-        return cfpFloat;
+        return new CFPFloat(bigDecimalNumber.floatValue());
     }
 
 }
