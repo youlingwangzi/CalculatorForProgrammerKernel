@@ -32,8 +32,12 @@ public class Main {
         System.out.println("oct："+cfpDouble.toOctString());
         System.out.println("bin："+cfpDouble.toBinString());*/
 
-        CFPRealNumber cfpRealNumber = new CFPRealNumber("1234.5");
-        cfpRealNumber.setBigDecimalNumber(new BigDecimal("1342.5"));
+        CFPRealNumber cfpRealNumber = new CFPRealNumber("-1342");
+        System.out.println("hex："+cfpRealNumber.toHexString());
+        System.out.println("dec："+cfpRealNumber.toDecString());
+        System.out.println("oct："+cfpRealNumber.toOctString());
+        System.out.println("bin："+cfpRealNumber.toBinString());
+        cfpRealNumber.setBigDecimalNumber("-1342.598");
         System.out.println("hex："+cfpRealNumber.toHexString());
         System.out.println("dec："+cfpRealNumber.toDecString());
         System.out.println("oct："+cfpRealNumber.toOctString());
@@ -41,6 +45,5 @@ public class Main {
 
         CFPDataType cfpDataType = CFPDataType.REAL_NUMBER;
         System.out.println(cfpDataType.isIntegersType());
-
     }
 }

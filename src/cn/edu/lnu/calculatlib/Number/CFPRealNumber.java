@@ -46,8 +46,13 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
         int j = 0;
 
-        if(decimalPart.equals(BigDecimal.ZERO))
+        if(decimalPart.equals(BigDecimal.ZERO)){
+            if(bigDecimalNumber.compareTo(BigDecimal.ZERO) == -1)
+                s2.insert(0, "-");
             return s2.toString();
+        }
+
+        decimalPart = decimalPart.abs(); //取绝对值
 
         s2.append('.');
         do{
@@ -66,6 +71,9 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
                 break;
             }
         }
+
+        if(bigDecimalNumber.compareTo(BigDecimal.ZERO) == -1)
+            s2.insert(0, "-");
 
         return s2.toString();
     }
@@ -114,8 +122,13 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
         int j = 0;
 
-        if(decimalPart.equals(BigDecimal.ZERO))
+        if(decimalPart.equals(BigDecimal.ZERO)){
+            if(bigDecimalNumber.compareTo(BigDecimal.ZERO) == -1)
+                s2.insert(0, "-");
             return s2.toString();
+        }
+
+        decimalPart = decimalPart.abs(); //取绝对值
 
         s2.append('.');
         do{
@@ -135,6 +148,8 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
             }
         }
 
+        if(bigDecimalNumber.compareTo(BigDecimal.ZERO) == -1)
+            s2.insert(0, "-");
         return s2.toString();
     }
 
@@ -143,6 +158,9 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         StringBuilder s = new StringBuilder("");
         s.append(this.integerPartToBinaryString());
         s.append(this.decimalPartToBinaryString());
+
+        if(bigDecimalNumber.compareTo(BigDecimal.ZERO) == -1)
+            s.insert(0, "-");
         return s.toString();
     }
 
@@ -155,6 +173,7 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         if(decimalPart.equals(BigDecimal.ZERO))
             return s.toString();
 
+        decimalPart = decimalPart.abs(); //取绝对值
         s.append('.');
         do{
             int i;
