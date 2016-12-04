@@ -1,5 +1,6 @@
 package cn.edu.lnu;
 
+import cn.edu.lnu.calculatlib.CFPDataType;
 import cn.edu.lnu.calculatlib.Number.*;
 
 import java.math.BigDecimal;
@@ -31,12 +32,15 @@ public class Main {
         System.out.println("oct："+cfpDouble.toOctString());
         System.out.println("bin："+cfpDouble.toBinString());*/
 
-        CFPRealNumber cfpRealNumber = new CFPRealNumber();
+        CFPRealNumber cfpRealNumber = new CFPRealNumber("1234.5");
         cfpRealNumber.setBigDecimalNumber(new BigDecimal("1342.5"));
         System.out.println("hex："+cfpRealNumber.toHexString());
         System.out.println("dec："+cfpRealNumber.toDecString());
         System.out.println("oct："+cfpRealNumber.toOctString());
         System.out.println("bin："+cfpRealNumber.toBinString());
+
+        CFPDataType cfpDataType = CFPDataType.REAL_NUMBER;
+        System.out.println(cfpDataType.isIntegersType());
 
     }
 }
