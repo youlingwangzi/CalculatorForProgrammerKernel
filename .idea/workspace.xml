@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ca95676-4a3f-4c84-8f1a-69ec55bd8b5f" name="Default" comment="完善注释，更新编写readme文档。">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/package.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/LibDoc/allclasses-frame.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/LibDoc/allclasses-noframe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/Main.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/Main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/CFPDataType.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/CFPDataType.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/CFPNumber.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/CFPNumber.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.html" />
@@ -45,11 +40,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/package-summary.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/package-summary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/package-tree.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/package-tree.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/package-use.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/calculatlib/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/class-use/Main.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/class-use/Main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-frame.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-summary.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-tree.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-use.html" afterPath="$PROJECT_DIR$/LibDoc/cn/edu/lnu/package-use.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/constant-values.html" afterPath="$PROJECT_DIR$/LibDoc/constant-values.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/deprecated-list.html" afterPath="$PROJECT_DIR$/LibDoc/deprecated-list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/help-doc.html" afterPath="$PROJECT_DIR$/LibDoc/help-doc.html" />
@@ -75,20 +65,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/overview-frame.html" afterPath="$PROJECT_DIR$/LibDoc/overview-frame.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/overview-summary.html" afterPath="$PROJECT_DIR$/LibDoc/overview-summary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/overview-tree.html" afterPath="$PROJECT_DIR$/LibDoc/overview-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LibDoc/package-list" afterPath="$PROJECT_DIR$/LibDoc/package-list" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPDataType.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPDataType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPByte.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPByte.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPDouble.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPDouble.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPFloat.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPFloat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPInteger.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPInteger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLogicOperation.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLogicOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLong.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLong.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRadixConversion.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRadixConversion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" />
     </list>
     <ignored path="CalculateLib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,12 +97,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overview.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="overview.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-              <folding />
+              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <folding>
+                <element signature="e#4778#4784#0" expanded="true" />
+                <element signature="e#4790#4796#0" expanded="true" />
+                <element signature="e#4814#4820#0" expanded="true" />
+                <element signature="e#6145#6151#0" expanded="true" />
+                <element signature="e#6155#6161#0" expanded="true" />
+                <element signature="e#6184#6190#0" expanded="true" />
+                <element signature="e#6224#6230#0" expanded="true" />
+                <element signature="e#6233#6239#0" expanded="true" />
+                <element signature="e#6259#6265#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="135">
+                <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -182,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBeChangedByBinary.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/DataType.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/Main.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPDataType.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" />
@@ -197,6 +197,7 @@
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/package.html" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/package.html" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" />
       </list>
     </option>
@@ -432,7 +433,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -693,7 +694,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480823192529</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="完善注释，更新编写readme文档。">
+      <created>1480909906015</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1480909906015</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -711,7 +719,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -766,6 +774,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="完成类图，完善类包" />
     <MESSAGE value="完成CFPInteger类。" />
     <MESSAGE value="完成CFPLong类。" />
@@ -1067,23 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -1111,7 +1103,34 @@
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="e#4778#4784#0" expanded="true" />
+            <element signature="e#4790#4796#0" expanded="true" />
+            <element signature="e#4814#4820#0" expanded="true" />
+            <element signature="e#6145#6151#0" expanded="true" />
+            <element signature="e#6155#6161#0" expanded="true" />
+            <element signature="e#6184#6190#0" expanded="true" />
+            <element signature="e#6224#6230#0" expanded="true" />
+            <element signature="e#6233#6239#0" expanded="true" />
+            <element signature="e#6259#6265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
