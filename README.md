@@ -7,6 +7,8 @@
 
 代码提供了`long`、`int`、`short`、`byte`、`real number（实数）`、`double`、`float`七种数据类型的进制转换、基础算术运算和部分数据类型的逻辑运算操作。并且支持在七种数据类型之间转换。
 
+详细API目录参见：[CFP_Kernel_Document](http://yuanxiaokun.xyz/cfp_kernel_doc/)。
+
 ## 类型简介
 
 - `CFPNumber` 类
