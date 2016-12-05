@@ -1,9 +1,9 @@
 package cn.edu.lnu.calculatlib.Number;
 
 /**
- * Created by youlingwangzi on 2016/12/2.
- * 基础运算定义接口。\n
+ * 基础运算定义接口。</br>
  * 该接口定义了五种基础算数运算。
+ * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
 public interface CFPBaseOperation <T> {

@@ -1,12 +1,21 @@
 package cn.edu.lnu.calculatlib.Number;
 
 /**
- * Created by youlignwangzi on 2016/12/2.
+ * Short类型封装类，提供了Short类型基础的进制转换、运算等操作。</br>
+ * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
 public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<CFPShort>, CFPRadixConversion{
+
+    /**
+     * 数据是以标准库Short类型存储，在此基础上提供额外的操作。
+     */
     private Short shortNumber;
 
+    /**
+     * 构造函数。
+     * @param a short型整数。
+     */
     public CFPShort(short a){
         shortNumber = a;
     }
@@ -58,6 +67,12 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
         return stringBuilder.toString();
     }
 
+    /**
+     * 将无符号字符串转换成CFPShort。
+     * @param s 要转换的字符串
+     * @param radix 字符串采用的进制
+     * @return 返回转换后的CFPShort类型对象
+     */
     public CFPShort parseUnsignedShort(String s, int radix){
         if (s.charAt(0) == '1' && s.length() == 16){
             StringBuilder stringBuilder = new StringBuilder(this.toBinString());
@@ -70,14 +85,26 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
         return this;
     }
 
+    /**
+     * 返回一个Short类型的对象。
+     * @return short类型的对象
+     */
     public Short getShortNumber() {
         return shortNumber;
     }
 
+    /**
+     * 设置Long类型对象的值。
+     * @param shortNumber Short类型的对象，置此数的值为次数据
+     */
     public void setShortNumber(Short shortNumber) {
         this.shortNumber = shortNumber;
     }
 
+    /**
+     * 将CFPShort类型转换成CFPRealNumber类型。
+     * @return 返回一个CFPRealNumber类型对象
+     */
     public CFPRealNumber toCFPRealNumber(){
         return new CFPRealNumber(shortNumber.toString());
     }

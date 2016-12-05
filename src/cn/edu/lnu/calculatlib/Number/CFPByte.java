@@ -1,12 +1,21 @@
 package cn.edu.lnu.calculatlib.Number;
 
 /**
+ * Byte类型封装类，提供了Byte类型基础的进制转换、运算等操作。</br>
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
 public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFPByte>,CFPRadixConversion {
+
+    /**
+     * 数据是以标准库Byte类型存储，在此基础上提供额外的操作。
+     */
     private Byte byteNumbger;
 
+    /**
+     * 构造函数。
+     * @param a byte型整数。
+     */
     public CFPByte(byte a){
         byteNumbger = a;
     }
@@ -59,6 +68,12 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
         return stringBuilder.toString();
     }
 
+    /**
+     * 将无符号字符串转换成CFPByte。
+     * @param s 要转换的字符串
+     * @param radix 字符串采用的进制
+     * @return 返回转换后的CFPByte类型对象
+     */
     public CFPByte parseUnsignedByte(String s, int radix){
         if (s.charAt(0) == '1' && s.length() == 8){
             StringBuilder stringBuilder = new StringBuilder(this.toBinString());
@@ -71,14 +86,26 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
         return this;
     }
 
+    /**
+     * 返回一个Byte类型的对象。
+     * @return Byte类型的对象
+     */
     public Byte getByteNumbger() {
         return byteNumbger;
     }
 
+    /**
+     * 设置Byte类型对象的值。
+     * @param byteNumbger Byte类型的对象，置此数的值为次数据
+     */
     public void setByteNumbger(Byte byteNumbger) {
         this.byteNumbger = byteNumbger;
     }
 
+    /**
+     * 将CFPByte类型转换成CFPRealNumber类型。
+     * @return 返回一个CFPRealNumber类型对象
+     */
     public CFPRealNumber toCFPRealNumber(){
         return new CFPRealNumber(byteNumbger.toString());
     }

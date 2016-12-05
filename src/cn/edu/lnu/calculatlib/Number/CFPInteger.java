@@ -1,13 +1,21 @@
 package cn.edu.lnu.calculatlib.Number;
 
 /**
- * Created by yuanx on 2016/10/12.
+ * Integer类型封装类，提供了long类型基础的进制转换、运算等操作。</br>
+ * Created by youlingwangzi on 2016/12/2.
  * @author yuanxiaokun
  */
-public class CFPInteger implements CFPBaseOperation <CFPInteger>,
-        CFPLogicOperation<CFPInteger>, CFPRadixConversion {
+public class CFPInteger implements CFPBaseOperation <CFPInteger>, CFPLogicOperation<CFPInteger>, CFPRadixConversion {
+
+    /**
+     * 数据是以标准库Integer类型存储，在此基础上提供额外的操作。
+     */
     private Integer integerNumber;
 
+    /**
+     * 构造函数。
+     * @param a int型整数。
+     */
     public CFPInteger(int a){
         integerNumber = a;
     }
@@ -42,19 +50,37 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>,
         return stringBuilder.toString();
     }
 
+    /**
+     * 将无符号字符串转换成CFPInteger。
+     * @param s 要转换的字符串
+     * @param radix 字符串采用的进制
+     * @return 返回转换后的CFPInteger类型对象
+     */
     public CFPInteger parseUnsignedInt(String s, int radix){
         this.integerNumber = Integer.parseUnsignedInt(s, radix);
         return this;
     }
 
+    /**
+     * 返回一个Integer类型的对象。
+     * @return Integer类型的对象
+     */
     public Integer getIntegerNumber() {
         return integerNumber;
     }
 
+    /**
+     * 设置Integer类型对象的值。
+     * @param integerNumber Integer类型的对象，置此数的值为次数据
+     */
     public void setIntegerNumber(Integer integerNumber) {
         this.integerNumber = integerNumber;
     }
 
+    /**
+     * 将CFPInteger类型转换成CFPRealNumber类型。
+     * @return 返回一个CFPRealNumber类型对象
+     */
     public CFPRealNumber toCFPRealNumber(){
         return new CFPRealNumber(integerNumber.toString());
     }

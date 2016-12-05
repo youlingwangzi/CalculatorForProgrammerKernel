@@ -1,12 +1,21 @@
 package cn.edu.lnu.calculatlib.Number;
 
 /**
+ * Double类型封装类，提供了Double类型基础的进制转换、运算等操作。</br>
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
 public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion {
+
+    /**
+     * 数据是以标准库Double类型存储，在此基础上提供额外的操作。
+     */
     private Double doubleNumber;
 
+    /**
+     * 构造函数。
+     * @param a double型整数。
+     */
     public CFPDouble(double a){
         doubleNumber = a;
     }
@@ -41,14 +50,26 @@ public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion
         return stringBuilder.toString();
     }
 
+    /**
+     * 返回一个Double类型的对象。
+     * @return Double类型的对象
+     */
     public Double getDoubleNumber() {
         return doubleNumber;
     }
 
+    /**
+     * 设置Double类型对象的值。
+     * @param doubleNumber Double类型的对象，置此数的值为次数据
+     */
     public void setDoubleNumber(Double doubleNumber) {
         this.doubleNumber = doubleNumber;
     }
 
+    /**
+     * 将CFPDouble类型转换成CFPRealNumber类型。
+     * @return 返回一个CFPRealNumber类型对象
+     */
     public CFPRealNumber toCFPRealNumber(){
         return new CFPRealNumber(doubleNumber.toString());
     }

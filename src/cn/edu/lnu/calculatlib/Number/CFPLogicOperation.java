@@ -1,9 +1,9 @@
 package cn.edu.lnu.calculatlib.Number;
 
 /**
+ * 逻辑运算定义接口。</br>
+ * 该接口定义了九种逻辑运算。</br>
  * Created by youlingwangzi on 2016/12/2.
- * 逻辑运算定义接口。\n
- * 该接口定义了九种逻辑运算。
  * youlingwangzi
  */
 public interface CFPLogicOperation<T> {

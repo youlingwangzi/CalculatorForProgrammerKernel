@@ -4,27 +4,60 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 /**
+ * 实数类型封装类，提供了实数类型基础的进制转换、运算等操作。</br>
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
 public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixConversion{
+
+    /**
+     * 数据是以标准库BigDecimal类型存储，在此基础上提供额外的操作。
+     */
     private BigDecimal bigDecimalNumber;
+
+    /**
+     * 二进制形式小数求解精度。
+     */
     private long binatyScale = 20;
+
+    /**
+     * 八进制形式小数求解精度。
+     */
     private long octScale = 20;
+
+    /**
+     * 十六进制形式小数求解精度。
+     */
     private long hexScale = 20;
 
+    /**
+     * 构造函数。
+     * @param s 要转换的字符串
+     */
     public CFPRealNumber(String s){
         bigDecimalNumber = new BigDecimal(s);
     }
 
+    /**
+     * 设置二进制小数精度。
+     * @param binatyScale 要设置的精度
+     */
     public void setBinatyScale(long binatyScale) {
         this.binatyScale = binatyScale;
     }
 
+    /**
+     * 设置十六进制小数精度。
+     * @param hexScale 要设置的精度
+     */
     public void setHexScale(long hexScale) {
         this.hexScale = hexScale;
     }
 
+    /**
+     * 设置八进制小数精度。
+     * @param octScale 要设置的精度
+     */
     public void setOctScale(long octScale) {
         this.octScale = octScale;
     }
@@ -78,6 +111,11 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         return s2.toString();
     }
 
+    /**
+     * 将数字转换成十六进制字符。供 toHexString()函数调用。
+     * @param a 要转换的数
+     * @return 返回转换后的字符
+     */
     private char toHexNumber(byte a){
         switch (a){
             case 0: return '0';
@@ -164,6 +202,10 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         return s.toString();
     }
 
+    /**
+     * 将实数小数部分转换成二进制。如果没有小数部分，则返回空字符串。
+     * @return 转换后的字符串
+     */
     private String decimalPartToBinaryString(){
         BigInteger integerPart = bigDecimalNumber.toBigInteger();
         BigDecimal decimalPart = bigDecimalNumber.subtract(new BigDecimal(integerPart));
@@ -195,6 +237,10 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         return s.toString();
     }
 
+    /**
+     * 将实数整数部分转换成二进制。
+     * @return 转换后的字符串
+     */
     private String integerPartToBinaryString(){
         BigInteger integerPart = bigDecimalNumber.toBigInteger();
         StringBuilder s = new StringBuilder("");
@@ -209,13 +255,20 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
     @Override
     public String toFullBinatyString() {
-        return null;
+        return this.toBinString();
     }
 
+    /**
+     * 返回一个BigDeclmal类型的对象。
+     * @return BigDeclmal类型的对象
+     */
     public BigDecimal getBigDecimalNumber() {
         return bigDecimalNumber;
     }
-
+    /**
+     * 设置BigDecimal类型对象的值。
+     * @param bigDecimalNumber 要设置的数据的字符串形式
+     */
     public void setBigDecimalNumber(String bigDecimalNumber) {
         this.bigDecimalNumber = new BigDecimal(bigDecimalNumber);
     }
@@ -250,26 +303,50 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         return this;
     }
 
+    /**
+     * 将数据转换成CFPLong类型。
+     * @return 返回CFPLong类型对象
+     */
     public CFPLong toCFPLong(){
         return new CFPLong(bigDecimalNumber.longValue());
     }
 
+    /**
+     * 将数据转换成CFPInteger类型。
+     * @return 返回CFPInteger类型对象
+     */
     public CFPInteger toCFPIteger(){
         return new CFPInteger(bigDecimalNumber.intValue());
     }
 
+    /**
+     * 将数据转换成CFPShort类型。
+     * @return 返回CFPShort类型对象
+     */
     public CFPShort toCFPShort(){
         return new CFPShort(bigDecimalNumber.shortValue());
     }
 
+    /**
+     * 将数据转换成CFPByte类型。
+     * @return 返回CFPByte类型对象
+     */
     public CFPByte toCFPByte(){
         return new CFPByte(bigDecimalNumber.byteValue());
     }
 
+    /**
+     * 将数据转换成CFPDouble类型。
+     * @return 返回CFPDouble类型对象
+     */
     public CFPDouble toCFPDouble(){
         return new CFPDouble(bigDecimalNumber.doubleValue());
     }
 
+    /**
+     * 将数据转换成CFPFloat类型。
+     * @return 返回CFPFloat类型对象
+     */
     public CFPFloat toCFPFloat(){
         return new CFPFloat(bigDecimalNumber.floatValue());
     }

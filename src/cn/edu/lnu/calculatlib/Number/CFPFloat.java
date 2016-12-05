@@ -1,13 +1,21 @@
 package cn.edu.lnu.calculatlib.Number;
 
 /**
+ * Float类型封装类，提供了Float类型基础的进制转换、运算等操作。</br>
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
 public class CFPFloat implements CFPRadixConversion, CFPBaseOperation<CFPFloat> {
 
+    /**
+     * 数据是以标准库Float类型存储，在此基础上提供额外的操作。
+     */
     private Float floatNumber;
 
+    /**
+     * 构造函数。
+     * @param a float型整数。
+     */
     public CFPFloat(float a){
         floatNumber = a;
     }
@@ -42,14 +50,26 @@ public class CFPFloat implements CFPRadixConversion, CFPBaseOperation<CFPFloat> 
         return stringBuilder.toString();
     }
 
+    /**
+     * 返回一个Float类型的对象。
+     * @return Float类型的对象
+     */
     public Float getFloatNumber() {
         return floatNumber;
     }
 
+    /**
+     * 设置Double类型对象的值。
+     * @param floatNumber Float类型的对象，置此数的值为次数据
+     */
     public void setFloatNumber(Float floatNumber) {
         this.floatNumber = floatNumber;
     }
 
+    /**
+     * 将CFPFloat类型转换成CFPRealNumber类型。
+     * @return 返回一个CFPRealNumber类型对象
+     */
     public CFPRealNumber toCFPRealNumber(){
         return new CFPRealNumber(floatNumber.toString());
     }

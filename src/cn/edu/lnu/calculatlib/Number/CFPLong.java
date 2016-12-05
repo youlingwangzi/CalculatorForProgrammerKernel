@@ -1,13 +1,21 @@
 package cn.edu.lnu.calculatlib.Number;
 
 /**
- * Created by youlingwangzi on 2016/10/2.
+ * Long类型封装类，提供了long类型基础的进制转换、运算等操作。</br>
+ * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
-public class CFPLong implements CFPBaseOperation<CFPLong>,
-        CFPLogicOperation<CFPLong>, CFPRadixConversion{
+public class CFPLong implements CFPBaseOperation<CFPLong>, CFPLogicOperation<CFPLong>, CFPRadixConversion{
+
+    /**
+     * 数据是以标准库Long类型存储，在此基础上提供额外的操作。
+     */
     private Long longNumber;
 
+    /**
+     * 构造函数。
+     * @param a long型整数。
+     */
     public CFPLong(long a) {
         longNumber = a;
     }
@@ -42,20 +50,37 @@ public class CFPLong implements CFPBaseOperation<CFPLong>,
         return stringBuilder.toString();
     }
 
+    /**
+     * 返回一个Long类型的对象。
+     * @return Long类型的对象
+     */
     public Long getLongNumber() {
         return longNumber;
     }
 
+    /**
+     * 设置Long类型对象的值。
+     * @param longNumber Long类型的对象，置此数的值为次数据
+     */
     public void setLongNumber(Long longNumber) {
         this.longNumber = longNumber;
     }
 
-
+    /**
+     * 将无符号字符串转换成CFPLong。
+     * @param s 要转换的字符串
+     * @param radix 字符串采用的进制
+     * @return 返回转换后的CFPLong类型对象
+     */
     public CFPLong parseUnsignedLong(String s, int radix){
         this.longNumber = Long.parseUnsignedLong(s, radix);
         return this;
     }
 
+    /**
+     * 将CFPLong类型转换成CFPRealNumber类型。
+     * @return 返回一个CFPRealNumber类型对象
+     */
     public CFPRealNumber toCFPRealNumber(){
         return new CFPRealNumber(longNumber.toString());
     }

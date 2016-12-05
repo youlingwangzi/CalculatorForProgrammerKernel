@@ -3,49 +3,108 @@ package cn.edu.lnu.calculatlib;
 import cn.edu.lnu.calculatlib.Number.*;
 
 /**
+ * 主数据类，可自由切换数据的数据类型，并提供不同的操作。</br>
  * Created by youlingwangzi on 2016/12/2.
+ * @version 0.9.0 beta
  * @author youlingwangzi
  */
 public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation<CFPNumber>, CFPRadixConversion{
+
+    /**
+     * Long类型内部存储结构。
+     */
     private CFPLong longNumber = new CFPLong(0);
+    /**
+     * Integer类型内部存储结构。
+     */
     private CFPInteger integerNumBer = new CFPInteger(0);
+    /**
+     * Short类型内部存储结构。
+     */
     private CFPShort shortNumber = new CFPShort((short) 0);
+    /**
+     * Byte类型内部存储结构。
+     */
     private CFPByte byteNumber = new CFPByte((byte)0);
+    /**
+     * RealNumber类型内部存储结构。
+     */
     private CFPRealNumber realNumber = new CFPRealNumber("0");
+    /**
+     * Double类型内部存储结构。
+     */
     private CFPDouble doubleNumber = new CFPDouble(0);
+    /**
+     * Float类型内部存储结构。
+     */
     private CFPFloat floatNumber = new CFPFloat(0);
 
+    /**
+     * 存储当前的数据类型。默认为Long类型。
+     */
     private CFPDataType dataType = CFPDataType.LONG;
 
+    /**
+     * 构造函数，默认构造Long型数据。
+     * @param a 要设置的值
+     */
     public CFPNumber(long a){
         longNumber.setLongNumber(a);
         realNumber.setBigDecimalNumber(longNumber.toDecString());
     }
 
+    /**
+     * 返回 CFPInteger 类型的对象。
+     * @return CFPInteger 类型对象
+     */
     private CFPInteger getIntegerNumBer() {
         return integerNumBer;
     }
 
+    /**
+     * 返回 CFPLong 类型的对象。
+     * @return CFPLong 类型对象
+     */
     private CFPLong getLongNumber() {
         return longNumber;
     }
 
+    /**
+     * 返回 CFPByte 类型的对象。
+     * @return CFPByte 类型对象
+     */
     private CFPByte getByteNumber() {
         return byteNumber;
     }
 
+    /**
+     * 返回 CFPShort 类型的对象。
+     * @return CFPShort 类型对象
+     */
     private CFPShort getShortNumber() {
         return shortNumber;
     }
 
+    /**
+     * 返回 CFPRealNumber 类型的对象。
+     * @return CFPRealNumber 类型对象
+     */
     private CFPRealNumber getRealNumber() {
         return realNumber;
     }
 
+    /**
+     * 返回 CFPDouble 类型的对象。
+     * @return CFPDouble 类型对象
+     */
     private CFPDouble getDoubleNumber() {
         return doubleNumber;
     }
 
+    /**
+     * 返回 CFPFloat 类型的对象。
+     * @return CFPFloat 类型对象
+     */
     private CFPFloat getFloatNumber() {
         return floatNumber;
     }
@@ -130,6 +189,11 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
         return s;
     }
 
+    /**
+     * 将无符号二进制字符串转换成 CFPNumber ，仅对整形数据有效。
+     * @param s 要转换的字符串
+     * @return 返回 CFPNumber 对象
+     */
     public CFPNumber parseUnsignedBinary(String s){
         switch (dataType){
             case LONG:        longNumber.parseUnsignedLong(s, 2); break;
@@ -309,30 +373,45 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
         return this;
     }
 
+    /**
+     * 切换数据类型置 Long 类型。
+     */
     public void turnToLong(){
         turnToRealNumber();
         longNumber = realNumber.toCFPLong();
         dataType = CFPDataType.LONG;
     }
 
+    /**
+     * 切换数据类型置 Integer 类型。
+     */
     public void turnToInteger(){
         turnToRealNumber();
         integerNumBer = realNumber.toCFPIteger();
         dataType = CFPDataType.INTEGER;
     }
 
+    /**
+     * 切换数据类型置 Short 类型。
+     */
     public void turnToShort(){
         turnToRealNumber();
         shortNumber = realNumber.toCFPShort();
         dataType = CFPDataType.SHORT;
     }
 
+    /**
+     * 切换数据类型置 Byte 类型。
+     */
     public void turnToByte(){
         turnToRealNumber();
         byteNumber = realNumber.toCFPByte();
         dataType = CFPDataType.BYTE;
     }
 
+    /**
+     * 切换数据类型置 RealNumber 类型。
+     */
     public void turnToRealNumber(){
         switch (dataType){
             case LONG:          realNumber = longNumber.toCFPRealNumber();break;
@@ -344,12 +423,18 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
         }
     }
 
+    /**
+     * 切换数据类型置 Double 类型。
+     */
     public void turnToDouble(){
         turnToRealNumber();
         doubleNumber = realNumber.toCFPDouble();
         dataType = CFPDataType.DOUBLE;
     }
 
+    /**
+     * 切换数据类型置 Float 类型。
+     */
     public void turnToFloat(){
         turnToRealNumber();
         floatNumber = realNumber.toCFPFloat();
