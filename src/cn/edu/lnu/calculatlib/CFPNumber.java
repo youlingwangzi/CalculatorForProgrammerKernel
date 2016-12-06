@@ -52,22 +52,23 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     /**
+     * 构造函数，按照传入的参数构造数据类型。
+     * @param s 要设置的值
+     * @param dataType 要设置的数据类型
+     */
+    public CFPNumber(String s, CFPDataType dataType){
+        realNumber.setBigDecimalNumber(s);
+        this.setDataType(dataType);
+    }
+
+    /**
      * 根据当前数据类型设置当前数据。会自动根据数据类型进行数据转换。
      * @param s 要设置的数值的十进制字符串
      * @return 返回设置后的 CFPNumber 对象
      */
     public CFPNumber setNumber(String s){
         realNumber.setBigDecimalNumber(s);
-        switch (dataType){
-            case LONG:this.turnToLong();break;
-            case INTEGER: this.turnToInteger();break;
-            case SHORT: this.turnToShort();break;
-            case BYTE: this.turnToByte();break;
-            case REAL_NUMBER: this.turnToRealNumber();break;
-            case DOUBLE: this.turnToDouble();break;
-            case FLOAT:  this.turnToFloat();break;
-        }
-        return this;
+        return this.setDataType(dataType);
     }
 
     /**
@@ -394,6 +395,24 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case REAL_NUMBER: realNumber.opp(); break;
             case DOUBLE:    doubleNumber.opp(); break;
             case FLOAT:      floatNumber.opp(); break;
+        }
+        return this;
+    }
+
+    /**
+     * 按照传入的参数切换数据类型。
+     * @param dataType 要切换的数据类型
+     * @return 返回转换后的 CFPNumber 对象
+     */
+    public CFPNumber setDataType(CFPDataType dataType){
+        switch (dataType){
+            case LONG: this.turnToLong();break;
+            case INTEGER: this.turnToInteger();break;
+            case SHORT: this.turnToShort();break;
+            case BYTE: this.turnToByte();break;
+            case REAL_NUMBER: this.turnToRealNumber();break;
+            case DOUBLE: this.turnToDouble();break;
+            case FLOAT:  this.turnToFloat();break;
         }
         return this;
     }

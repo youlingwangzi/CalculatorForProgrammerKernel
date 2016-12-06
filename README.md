@@ -89,7 +89,14 @@ eg：`-1342.598`转换为`-10100111110.10011001000101101……`；
 
 - 对于数据类型转换过程的溢出，将直接按溢出后的结果转换。
 
+- 当两个 `CFPNumber` 类对象进行基本算术运算或者逻辑运算时，请确保两个对象的内部数据类型相同，否则计算结果未定义。
+
 ## 更新日志
+
+### 0.9.3beta
+
+1. `CFPNumber` 类增加 ` public CFPNumber setNumber(String s)`、`public CFPNumber setDataType(CFPDataType dataType)`
+方法。
 
 ### 0.9.2beta
 
