@@ -95,7 +95,7 @@ eg：`-1342.598`转换为`-10100111110.10011001000101101……`；
 
 ### 0.9.3beta
 
-1. `CFPNumber` 类增加 ` public CFPNumber setNumber(String s)`、`public CFPNumber setDataType(CFPDataType dataType)`
+1. `CFPNumber` 类增加 `public CFPNumber setNumber(String s)` 、 `public CFPNumber setDataType(CFPDataType dataType)`
 方法。
 
 ### 0.9.2beta
