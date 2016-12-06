@@ -21,7 +21,7 @@ public interface CFPBaseOperation <T> {
      * @param a 减数
      * @return this-a的差
      */
-    T sub(T a) throws CFPDivZeroExceptiion;
+    T sub(T a);
 
     /**
      * 乘法操作，置this的值为this*a，并返回this*a的值。
@@ -33,6 +33,7 @@ public interface CFPBaseOperation <T> {
     /**
      * 除法操作，置this的值为this/a，并返回this/a的值。
      * @param a 被除数
+     * @throws CFPDivZeroExceptiion 当除数为0时抛出此异常
      * @return this/a的商
      */
     T div(T a) throws CFPDivZeroExceptiion;

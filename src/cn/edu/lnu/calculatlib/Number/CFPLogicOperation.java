@@ -13,6 +13,7 @@ public interface CFPLogicOperation<T> {
     /**
      * 取模运算，置this的值为this%a，并返回this%a的值。
      * @param a 要取模的值
+     * @throws CFPDivZeroExceptiion 当除数为0时抛出此异常
      * @return this%a的值
      */
     T mod(T a) throws CFPDivZeroExceptiion;
