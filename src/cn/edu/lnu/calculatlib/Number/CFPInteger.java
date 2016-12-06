@@ -121,6 +121,11 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>, CFPLogicOperat
     }
 
     @Override
+    public int compareTo(CFPInteger a) {
+        return this.integerNumber.compareTo(a.getIntegerNumber());
+    }
+
+    @Override
     public CFPInteger mod(CFPInteger a) throws CFPDivZeroExceptiion {
         if (a.getIntegerNumber() == 0){
             throw new CFPDivZeroExceptiion();

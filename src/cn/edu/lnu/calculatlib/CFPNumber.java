@@ -72,6 +72,14 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     /**
+     * 返回当前对象的数据类型。
+     * @return 当前对象的数据类型
+     */
+    public CFPDataType getDataType() {
+        return dataType;
+    }
+
+    /**
      * 返回 CFPInteger 类型的对象。
      * @return CFPInteger 类型对象
      */
@@ -223,7 +231,13 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     @Override
-    public CFPNumber mod(CFPNumber a) throws CFPDivZeroExceptiion {
+    public CFPNumber mod(CFPNumber a) throws CFPDivZeroExceptiion , CFPNonsupportedOperation{
+        if (!this.dataType.isIntegersType()){
+            throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 mod 操作。");
+        }
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         try {
             switch (dataType){
                 case LONG:        longNumber.mod(a.getLongNumber()); break;
@@ -238,7 +252,13 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     @Override
-    public CFPNumber or(CFPNumber a) {
+    public CFPNumber or(CFPNumber a) throws CFPNonsupportedOperation {
+        if (!this.dataType.isIntegersType()){
+            throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 or 操作。");
+        }
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         switch (dataType){
             case LONG:        longNumber.or(a.getLongNumber()); break;
             case INTEGER:  integerNumBer.or(a.getIntegerNumBer()); break;
@@ -249,7 +269,13 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     @Override
-    public CFPNumber xor(CFPNumber a) {
+    public CFPNumber xor(CFPNumber a) throws CFPNonsupportedOperation {
+        if (!this.dataType.isIntegersType()){
+            throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 xor 操作。");
+        }
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         switch (dataType){
             case LONG:        longNumber.xor(a.getLongNumber()); break;
             case INTEGER:  integerNumBer.xor(a.getIntegerNumBer()); break;
@@ -260,7 +286,13 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     @Override
-    public CFPNumber and(CFPNumber a) {
+    public CFPNumber and(CFPNumber a) throws CFPNonsupportedOperation {
+        if (!this.dataType.isIntegersType()){
+            throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 and 操作。");
+        }
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         switch (dataType){
             case LONG:        longNumber.and(a.getLongNumber()); break;
             case INTEGER:  integerNumBer.and(a.getIntegerNumBer()); break;
@@ -271,7 +303,10 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     @Override
-    public CFPNumber not() {
+    public CFPNumber not() throws CFPNonsupportedOperation {
+        if (!this.dataType.isIntegersType()){
+            throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 not 操作。");
+        }
         switch (dataType){
             case LONG:        longNumber.not(); break;
             case INTEGER:  integerNumBer.not(); break;
@@ -282,7 +317,13 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     @Override
-    public CFPNumber lsl(CFPNumber a) {
+    public CFPNumber lsl(CFPNumber a) throws CFPNonsupportedOperation {
+        if (!this.dataType.isIntegersType()){
+            throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 lsl 操作。");
+        }
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         switch (dataType){
             case LONG:        longNumber.lsl(a.getLongNumber()); break;
             case INTEGER:  integerNumBer.lsl(a.getIntegerNumBer()); break;
@@ -293,7 +334,13 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     @Override
-    public CFPNumber lsr(CFPNumber a) {
+    public CFPNumber lsr(CFPNumber a) throws CFPNonsupportedOperation {
+        if (!this.dataType.isIntegersType()){
+            throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 lsr 操作。");
+        }
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         switch (dataType){
             case LONG:        longNumber.lsr(a.getLongNumber()); break;
             case INTEGER:  integerNumBer.lsr(a.getIntegerNumBer()); break;
@@ -304,7 +351,13 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     @Override
-    public CFPNumber sl(CFPNumber a) {
+    public CFPNumber sl(CFPNumber a) throws CFPNonsupportedOperation {
+        if (!this.dataType.isIntegersType()){
+            throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 sl 操作。");
+        }
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         switch (dataType){
             case LONG:        longNumber.sl(a.getLongNumber()); break;
             case INTEGER:  integerNumBer.sl(a.getIntegerNumBer()); break;
@@ -315,7 +368,13 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     @Override
-    public CFPNumber sr(CFPNumber a) {
+    public CFPNumber sr(CFPNumber a) throws CFPNonsupportedOperation {
+        if (!this.dataType.isIntegersType()){
+            throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 sr 操作。");
+        }
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         switch (dataType){
             case LONG:        longNumber.sr(a.getLongNumber()); break;
             case INTEGER:  integerNumBer.sr(a.getIntegerNumBer()); break;
@@ -327,6 +386,9 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     @Override
     public CFPNumber add(CFPNumber a) {
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         switch (dataType){
             case LONG:        longNumber.add(a.getLongNumber()); break;
             case INTEGER:  integerNumBer.add(a.getIntegerNumBer()); break;
@@ -341,6 +403,9 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     @Override
     public CFPNumber sub(CFPNumber a) {
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         switch (dataType){
             case LONG:        longNumber.sub(a.getLongNumber()); break;
             case INTEGER:  integerNumBer.sub(a.getIntegerNumBer()); break;
@@ -355,6 +420,9 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     @Override
     public CFPNumber mul(CFPNumber a) {
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         switch (dataType){
             case LONG:        longNumber.mul(a.getLongNumber()); break;
             case INTEGER:  integerNumBer.mul(a.getIntegerNumBer()); break;
@@ -369,6 +437,9 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     @Override
     public CFPNumber div(CFPNumber a) throws CFPDivZeroExceptiion {
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         try {
             switch (dataType){
                 case LONG:        longNumber.div(a.getLongNumber()); break;
@@ -397,6 +468,21 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case FLOAT:      floatNumber.opp(); break;
         }
         return this;
+    }
+
+    @Override
+    public int compareTo(CFPNumber a) {
+        int result = 0;
+        switch (dataType){
+            case LONG:        result = longNumber.compareTo(a.getLongNumber()); break;
+            case INTEGER:  result = integerNumBer.compareTo(a.getIntegerNumBer()); break;
+            case SHORT:      result = shortNumber.compareTo(a.getShortNumber()); break;
+            case BYTE:        result = byteNumber.compareTo(a.getByteNumber()); break;
+            case REAL_NUMBER: result = realNumber.compareTo(a.getRealNumber()); break;
+            case DOUBLE:    result = doubleNumber.compareTo(a.getDoubleNumber()); break;
+            case FLOAT:      result = floatNumber.compareTo(a.getFloatNumber()); break;
+        }
+        return result;
     }
 
     /**

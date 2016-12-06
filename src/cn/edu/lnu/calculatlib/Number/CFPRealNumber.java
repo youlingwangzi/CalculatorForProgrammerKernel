@@ -308,6 +308,11 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         return this;
     }
 
+    @Override
+    public int compareTo(CFPRealNumber a) {
+        return this.bigDecimalNumber.compareTo(a.getBigDecimalNumber());
+    }
+
     /**
      * 将数据转换成CFPLong类型。
      * @return 返回CFPLong类型对象

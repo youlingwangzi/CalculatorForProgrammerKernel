@@ -108,4 +108,9 @@ public class CFPFloat implements CFPRadixConversion, CFPBaseOperation<CFPFloat> 
         this.floatNumber = -this.floatNumber;
         return this;
     }
+
+    @Override
+    public int compareTo(CFPFloat a) {
+        return this.floatNumber.compareTo(a.getFloatNumber());
+    }
 }

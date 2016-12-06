@@ -120,6 +120,11 @@ public class CFPLong implements CFPBaseOperation<CFPLong>, CFPLogicOperation<CFP
     }
 
     @Override
+    public int compareTo(CFPLong a) {
+        return this.longNumber.compareTo(a.getLongNumber());
+    }
+
+    @Override
     public CFPLong mod(CFPLong a) throws CFPDivZeroExceptiion {
         if(a.getLongNumber() == 0)
             throw new CFPDivZeroExceptiion();

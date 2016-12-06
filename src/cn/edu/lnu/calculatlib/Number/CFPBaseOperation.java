@@ -43,4 +43,11 @@ public interface CFPBaseOperation <T> {
      * @return -this的值
      */
     T opp();
+
+    /**
+     * 数据大小比较函数。判断 this 与 a 的大小关系。
+     * @param a 需要比较的数
+     * @return 返回-1表示this小于a，返回0表示this等于a，返回1表示this大于a。
+     */
+    int compareTo(T a);
 }

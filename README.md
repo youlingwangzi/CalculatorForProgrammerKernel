@@ -5,7 +5,8 @@
 这是安卓应用 `程序员计算器` 的计算内核源代码，应用`程序员计算器`
 你可以在 [这里](http://app.mi.com/details?id=com.example.calculatorforprogrammer) 找到。
 
-代码提供了`long`、`int`、`short`、`byte`、`real number（实数）`、`double`、`float`七种数据类型的进制转换、基础算术运算和部分数据类型的逻辑运算操作。并且支持在七种数据类型之间转换。
+代码提供了`long`、`int`、`short`、`byte`、`real number（实数）`、`double`、`float`
+七种数据类型的进制转换、基础算术运算和部分数据类型的逻辑运算操作。并且支持在七种数据类型之间转换。
 
 详细API目录参见：[CFP_Kernel_Document](http://yuanxiaokun.xyz/cfp_kernel_doc/)。
 
@@ -79,23 +80,37 @@ eg：`-1342.598`转换为`-2476.46213207126010142233……`；
 
 eg：`-1342.598`转换为`-10100111110.10011001000101101……`；
 
-`Double` `Float`类型返回Double、Float类`public static long doubleToLongBits(double value)`、 `public static int floatToIntBits(float value)`函数结果。
+`Double` `Float`类型返回Double、Float类`public static long doubleToLongBits(double value)`、 
+`public static int floatToIntBits(float value)`函数结果。
 
 ### 异常处理
 
 - 对于 `div（除法）`、`mod（取模）` 操作，如果除数为零，则会抛出 `CFPDivZeroException` 异常。 
+- 对于 `CFPNumber` 对象数据类型设置为非整数类型，且试图执行不支持的逻辑运算操作时，
+将抛出 `CFPNonsupportedOperation` 异常。
 
 ### 其他说明
 
 - 对于数据类型转换过程的溢出，将直接按溢出后的结果转换。
 
-- 当两个 `CFPNumber` 类对象进行基本算术运算或者逻辑运算时，请确保两个对象的内部数据类型相同，否则计算结果未定义。
+- 当两个 `CFPNumber` 类对象进行基本算术运算或者逻辑运算时，如果两个对象数据类型不同，
+则会将被作为传入参数的对象的数据类型强制转换为调用者的类型。eg：a.add(b)，如果a、b类型不同，
+则会将b的类型强制转换为a的类型参与运算。
 
 ## 更新日志
 
+### 0.9.4beta
+
+1. `CFPNumber` 类增加 `public CFPDataType getDataType()` 函数。
+2. `CFPBaseOperation` 接口增加 `int compareTo(T a)` 函数，相关类已全部实现该操作。
+3. 增加 `CFPNonsupportedOperation` 异常，当对于 `CFPNumber` 
+对象数据类型设置为非整数类型，且试图执行不支持的逻辑运算操作时，抛出此异常。
+4. `CFPNumber` 类做双目运算时加入数据类型转换。
+
 ### 0.9.3beta
 
-1. `CFPNumber` 类增加 `public CFPNumber setNumber(String s)` 、 `public CFPNumber setDataType(CFPDataType dataType)`
+1. `CFPNumber` 类增加 `public CFPNumber setNumber(String s)` 、 
+`public CFPNumber setDataType(CFPDataType dataType)`
 方法。
 
 ### 0.9.2beta

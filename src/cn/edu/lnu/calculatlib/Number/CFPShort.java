@@ -145,6 +145,11 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
     }
 
     @Override
+    public int compareTo(CFPShort a) {
+        return this.shortNumber.compareTo(a.getShortNumber());
+    }
+
+    @Override
     public CFPShort mod(CFPShort a) throws CFPDivZeroExceptiion {
         if (a.getShortNumber() == 0){
             throw new CFPDivZeroExceptiion();

@@ -108,4 +108,9 @@ public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion
         this.doubleNumber = -this.doubleNumber;
         return this;
     }
+
+    @Override
+    public int compareTo(CFPDouble a) {
+        return this.doubleNumber.compareTo(a.getDoubleNumber());
+    }
 }

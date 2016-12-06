@@ -146,6 +146,11 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
     }
 
     @Override
+    public int compareTo(CFPByte a) {
+        return this.byteNumbger.compareTo(a.getByteNumbger());
+    }
+
+    @Override
     public CFPByte mod(CFPByte a) throws CFPDivZeroExceptiion {
         if (a.getByteNumbger() == 0){
             throw new CFPDivZeroExceptiion();
