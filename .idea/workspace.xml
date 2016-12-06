@@ -4,12 +4,10 @@
     <option name="SCOPE_TYPE" value="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca95676-4a3f-4c84-8f1a-69ec55bd8b5f" name="Default" comment="">
+    <list default="true" id="0ca95676-4a3f-4c84-8f1a-69ec55bd8b5f" name="Default" comment="CFPNumber类增加 public CFPNumber setNumber(String s) 方法。更新文档。">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPDivZeroExceptiion.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPDivZeroExceptiion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLogicOperation.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLogicOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" />
     </list>
     <ignored path="CalculateLib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overview.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="overview.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="71" column="58" lean-forward="false" selection-start-line="71" selection-start-column="58" selection-end-line="71" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#6370#6376#0" expanded="true" />
@@ -103,12 +101,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="344">
-                <caret line="87" column="7" lean-forward="true" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
+              <first_editor relative-caret-position="1275">
+                <caret line="85" column="65" lean-forward="false" selection-start-line="85" selection-start-column="65" selection-end-line="85" selection-end-column="65" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -129,8 +127,8 @@
       <file leaf-file-name="CFPNumber.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="457" column="5" lean-forward="true" selection-start-line="457" selection-start-column="5" selection-end-line="457" selection-end-column="5" />
+            <state relative-caret-position="240">
+              <caret line="59" column="40" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="40" />
               <folding>
                 <element signature="e#1185#1186#0" expanded="true" />
                 <element signature="e#1234#1235#0" expanded="true" />
@@ -211,12 +209,12 @@
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPFloat.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPDouble.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/Main.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPDivZeroExceptiion.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLogicOperation.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" />
+        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -290,6 +288,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lnu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CalculateLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CalculateLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lnu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calculatlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CalculateLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CalculateLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lnu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calculatlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Number" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -783,7 +829,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480998038984</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="更新部分注释。生成新的文档。">
+      <created>1480999250308</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1480999250308</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -879,7 +932,8 @@
     <MESSAGE value="将文档独立。本仓库只保留代码。" />
     <MESSAGE value="0.9.1beta&#10;1. 添加 `CFPDivZeroException` 异常，当执行 `div`、`mod` 运算除数为零时抛出此异常。&#10;2. 更改 `CFPNumber` 类数据类型转换返回值，更改后返回 `CFPNumber` 对象。" />
     <MESSAGE value="更正CFPNumber类注释。生成最新文档。" />
-    <option name="LAST_COMMIT_MESSAGE" value="更正CFPNumber类注释。生成最新文档。" />
+    <MESSAGE value="更新部分注释。生成新的文档。" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新部分注释。生成新的文档。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1157,34 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="344">
-            <caret line="87" column="7" lean-forward="true" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="457" column="5" lean-forward="true" selection-start-line="457" selection-start-column="5" selection-end-line="457" selection-end-column="5" />
-          <folding>
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1234#1235#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPDivZeroExceptiion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1211,8 +1237,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="71" column="58" lean-forward="false" selection-start-line="71" selection-start-column="58" selection-end-line="71" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#6370#6376#0" expanded="true" />
@@ -1225,6 +1251,34 @@
             <element signature="e#7825#7831#0" expanded="true" />
             <element signature="e#7851#7857#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="59" column="40" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="40" />
+          <folding>
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1234#1235#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1275">
+            <caret line="85" column="65" lean-forward="false" selection-start-line="85" selection-start-column="65" selection-end-line="85" selection-end-column="65" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

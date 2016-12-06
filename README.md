@@ -81,11 +81,19 @@ eg：`-1342.598`转换为`-10100111110.10011001000101101……`；
 
 `Double` `Float`类型返回Double、Float类`public static long doubleToLongBits(double value)`、 `public static int floatToIntBits(float value)`函数结果。
 
+### 异常处理
+
+- 对于 `div（除法）`、`mod（取模）` 操作，如果除数为零，则会抛出 `CFPDivZeroException` 异常。 
+
 ### 其他说明
 
 - 对于数据类型转换过程的溢出，将直接按溢出后的结果转换。
 
 ## 更新日志
+
+### 0.9.2beta
+
+1. `CFPNumbwe` 类增加 `public CFPNumber setNumber(String s)` 方法。
 
 ### 0.9.1beta
 
