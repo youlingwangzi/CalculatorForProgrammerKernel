@@ -1,5 +1,7 @@
 package cn.edu.lnu.calculatlib.Number;
 
+import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
+
 /**
  * Double类型封装类，提供了Double类型基础的进制转换、运算等操作。</br>
  * Created by youlingwangzi on 2016/12/2.
@@ -93,7 +95,10 @@ public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion
     }
 
     @Override
-    public CFPDouble div(CFPDouble a) {
+    public CFPDouble div(CFPDouble a) throws CFPDivZeroExceptiion {
+        if(a.getDoubleNumber().compareTo((double)0) == 0){
+            throw new CFPDivZeroExceptiion();
+        }
         this.doubleNumber /= a.getDoubleNumber();
         return this;
     }

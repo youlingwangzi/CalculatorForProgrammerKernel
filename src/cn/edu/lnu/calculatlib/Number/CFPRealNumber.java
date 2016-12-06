@@ -1,5 +1,7 @@
 package cn.edu.lnu.calculatlib.Number;
 
+import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
@@ -292,7 +294,10 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
     }
 
     @Override
-    public CFPRealNumber div(CFPRealNumber a) {
+    public CFPRealNumber div(CFPRealNumber a) throws CFPDivZeroExceptiion {
+        if(a.getBigDecimalNumber().compareTo(BigDecimal.ZERO) == 0){
+            throw new CFPDivZeroExceptiion();
+        }
         this.bigDecimalNumber = this.bigDecimalNumber.divide(a.getBigDecimalNumber());
         return this;
     }

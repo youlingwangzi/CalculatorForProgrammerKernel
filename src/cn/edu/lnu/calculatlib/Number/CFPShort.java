@@ -1,5 +1,7 @@
 package cn.edu.lnu.calculatlib.Number;
 
+import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
+
 /**
  * Short类型封装类，提供了Short类型基础的进制转换、运算等操作。</br>
  * Created by youlingwangzi on 2016/12/2.
@@ -128,7 +130,10 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
     }
 
     @Override
-    public CFPShort div(CFPShort a) {
+    public CFPShort div(CFPShort a) throws CFPDivZeroExceptiion {
+        if (a.getShortNumber() == 0){
+            throw new CFPDivZeroExceptiion();
+        }
         this.shortNumber = (short) (this.shortNumber / a.getShortNumber());
         return this;
     }
@@ -140,7 +145,10 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
     }
 
     @Override
-    public CFPShort mod(CFPShort a) {
+    public CFPShort mod(CFPShort a) throws CFPDivZeroExceptiion {
+        if (a.getShortNumber() == 0){
+            throw new CFPDivZeroExceptiion();
+        }
         this.shortNumber = (short) (this.shortNumber % a.getShortNumber());
         return this;
     }

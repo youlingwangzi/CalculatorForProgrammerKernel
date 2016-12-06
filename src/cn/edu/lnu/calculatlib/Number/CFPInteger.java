@@ -1,5 +1,7 @@
 package cn.edu.lnu.calculatlib.Number;
 
+import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
+
 /**
  * Integer类型封装类，提供了long类型基础的进制转换、运算等操作。</br>
  * Created by youlingwangzi on 2016/12/2.
@@ -104,7 +106,10 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>, CFPLogicOperat
     }
 
     @Override
-    public CFPInteger div(CFPInteger a) {
+    public CFPInteger div(CFPInteger a) throws CFPDivZeroExceptiion {
+        if (a.getIntegerNumber() == 0){
+            throw new CFPDivZeroExceptiion();
+        }
         this.integerNumber /= a.getIntegerNumber();
         return this;
     }
@@ -116,7 +121,10 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>, CFPLogicOperat
     }
 
     @Override
-    public CFPInteger mod(CFPInteger a) {
+    public CFPInteger mod(CFPInteger a) throws CFPDivZeroExceptiion {
+        if (a.getIntegerNumber() == 0){
+            throw new CFPDivZeroExceptiion();
+        }
         this.integerNumber %= a.integerNumber;
         return this;
     }

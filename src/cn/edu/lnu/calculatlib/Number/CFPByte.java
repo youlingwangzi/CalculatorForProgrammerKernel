@@ -1,5 +1,7 @@
 package cn.edu.lnu.calculatlib.Number;
 
+import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
+
 /**
  * Byte类型封装类，提供了Byte类型基础的进制转换、运算等操作。</br>
  * Created by youlingwangzi on 2016/12/2.
@@ -129,7 +131,10 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
     }
 
     @Override
-    public CFPByte div(CFPByte a) {
+    public CFPByte div(CFPByte a) throws CFPDivZeroExceptiion {
+        if (a.getByteNumbger() == 0){
+            throw new CFPDivZeroExceptiion();
+        }
         this.byteNumbger = (byte) (this.byteNumbger / a.getByteNumbger());
         return this;
     }
@@ -141,7 +146,10 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
     }
 
     @Override
-    public CFPByte mod(CFPByte a) {
+    public CFPByte mod(CFPByte a) throws CFPDivZeroExceptiion {
+        if (a.getByteNumbger() == 0){
+            throw new CFPDivZeroExceptiion();
+        }
         this.byteNumbger = (byte) (this.byteNumbger % a.getByteNumbger());
         return this;
     }

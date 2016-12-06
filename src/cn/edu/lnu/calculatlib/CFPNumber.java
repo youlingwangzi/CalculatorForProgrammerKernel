@@ -42,15 +42,14 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     /**
      * 存储当前的数据类型。默认为Long类型。
      */
-    private CFPDataType dataType = CFPDataType.LONG;
+    private CFPDataType dataType = CFPDataType.REAL_NUMBER;
 
     /**
      * 构造函数，默认构造Long型数据。
-     * @param a 要设置的值
+     * @param s 要设置的值
      */
-    public CFPNumber(long a){
-        longNumber.setLongNumber(a);
-        realNumber.setBigDecimalNumber(longNumber.toDecString());
+    public CFPNumber(String s){
+        realNumber.setBigDecimalNumber(s);
     }
 
     /**
@@ -205,12 +204,16 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     @Override
-    public CFPNumber mod(CFPNumber a) {
-        switch (dataType){
-            case LONG:        longNumber.mod(a.getLongNumber()); break;
-            case INTEGER:  integerNumBer.mod(a.getIntegerNumBer()); break;
-            case SHORT:      shortNumber.mod(a.getShortNumber()); break;
-            case BYTE:        byteNumber.mod(a.getByteNumber()); break;
+    public CFPNumber mod(CFPNumber a) throws CFPDivZeroExceptiion {
+        try {
+            switch (dataType){
+                case LONG:        longNumber.mod(a.getLongNumber()); break;
+                case INTEGER:  integerNumBer.mod(a.getIntegerNumBer()); break;
+                case SHORT:      shortNumber.mod(a.getShortNumber()); break;
+                case BYTE:        byteNumber.mod(a.getByteNumber()); break;
+            }
+        }catch (CFPDivZeroExceptiion e){
+            throw e;
         }
         return this;
     }
@@ -346,15 +349,19 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     }
 
     @Override
-    public CFPNumber div(CFPNumber a) {
-        switch (dataType){
-            case LONG:        longNumber.div(a.getLongNumber()); break;
-            case INTEGER:  integerNumBer.div(a.getIntegerNumBer()); break;
-            case SHORT:      shortNumber.div(a.getShortNumber()); break;
-            case BYTE:        byteNumber.div(a.getByteNumber()); break;
-            case REAL_NUMBER: realNumber.div(a.getRealNumber()); break;
-            case DOUBLE:    doubleNumber.div(a.getDoubleNumber()); break;
-            case FLOAT:      floatNumber.div(a.getFloatNumber()); break;
+    public CFPNumber div(CFPNumber a) throws CFPDivZeroExceptiion {
+        try {
+            switch (dataType){
+                case LONG:        longNumber.div(a.getLongNumber()); break;
+                case INTEGER:  integerNumBer.div(a.getIntegerNumBer()); break;
+                case SHORT:      shortNumber.div(a.getShortNumber()); break;
+                case BYTE:        byteNumber.div(a.getByteNumber()); break;
+                case REAL_NUMBER: realNumber.div(a.getRealNumber()); break;
+                case DOUBLE:    doubleNumber.div(a.getDoubleNumber()); break;
+                case FLOAT:      floatNumber.div(a.getFloatNumber()); break;
+            }
+        }catch (CFPDivZeroExceptiion e){
+            throw e;
         }
         return this;
     }
@@ -376,43 +383,47 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     /**
      * 切换数据类型置 Long 类型。
      */
-    public void turnToLong(){
+    public CFPNumber turnToLong(){
         turnToRealNumber();
         longNumber = realNumber.toCFPLong();
         dataType = CFPDataType.LONG;
+        return this;
     }
 
     /**
      * 切换数据类型置 Integer 类型。
      */
-    public void turnToInteger(){
+    public CFPNumber turnToInteger(){
         turnToRealNumber();
         integerNumBer = realNumber.toCFPIteger();
         dataType = CFPDataType.INTEGER;
+        return this;
     }
 
     /**
      * 切换数据类型置 Short 类型。
      */
-    public void turnToShort(){
+    public CFPNumber turnToShort(){
         turnToRealNumber();
         shortNumber = realNumber.toCFPShort();
         dataType = CFPDataType.SHORT;
+        return this;
     }
 
     /**
      * 切换数据类型置 Byte 类型。
      */
-    public void turnToByte(){
+    public CFPNumber turnToByte(){
         turnToRealNumber();
         byteNumber = realNumber.toCFPByte();
         dataType = CFPDataType.BYTE;
+        return this;
     }
 
     /**
      * 切换数据类型置 RealNumber 类型。
      */
-    public void turnToRealNumber(){
+    public CFPNumber turnToRealNumber(){
         switch (dataType){
             case LONG:          realNumber = longNumber.toCFPRealNumber();break;
             case INTEGER:       realNumber = integerNumBer.toCFPRealNumber();break;
@@ -421,23 +432,26 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case DOUBLE:        realNumber = doubleNumber.toCFPRealNumber();break;
             case FLOAT:         realNumber = floatNumber.toCFPRealNumber();break;
         }
+        return this;
     }
 
     /**
      * 切换数据类型置 Double 类型。
      */
-    public void turnToDouble(){
+    public CFPNumber turnToDouble(){
         turnToRealNumber();
         doubleNumber = realNumber.toCFPDouble();
         dataType = CFPDataType.DOUBLE;
+        return this;
     }
 
     /**
      * 切换数据类型置 Float 类型。
      */
-    public void turnToFloat(){
+    public CFPNumber turnToFloat(){
         turnToRealNumber();
         floatNumber = realNumber.toCFPFloat();
         dataType = CFPDataType.FLOAT;
+        return this;
     }
 }

@@ -1,5 +1,7 @@
 package cn.edu.lnu.calculatlib.Number;
 
+import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
+
 /**
  * 逻辑运算定义接口。</br>
  * 该接口定义了九种逻辑运算。</br>
@@ -13,7 +15,7 @@ public interface CFPLogicOperation<T> {
      * @param a 要取模的值
      * @return this%a的值
      */
-    T mod(T a);
+    T mod(T a) throws CFPDivZeroExceptiion;
 
     /**
      * 或运算，置this的值为this|a，并返回this|a的值。

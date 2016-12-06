@@ -1,5 +1,7 @@
 package cn.edu.lnu.calculatlib.Number;
 
+import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
+
 /**
  * Float类型封装类，提供了Float类型基础的进制转换、运算等操作。</br>
  * Created by youlingwangzi on 2016/12/2.
@@ -93,7 +95,10 @@ public class CFPFloat implements CFPRadixConversion, CFPBaseOperation<CFPFloat> 
     }
 
     @Override
-    public CFPFloat div(CFPFloat a) {
+    public CFPFloat div(CFPFloat a) throws CFPDivZeroExceptiion {
+        if (a.getFloatNumber().compareTo((float)0) == 0){
+            throw new CFPDivZeroExceptiion();
+        }
         this.floatNumber /= a.getFloatNumber();
         return this;
     }

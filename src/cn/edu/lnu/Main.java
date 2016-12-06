@@ -1,6 +1,8 @@
 package cn.edu.lnu;
 
 import cn.edu.lnu.calculatlib.CFPDataType;
+import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
+import cn.edu.lnu.calculatlib.CFPNumber;
 import cn.edu.lnu.calculatlib.Number.*;
 
 import java.math.BigDecimal;
@@ -45,5 +47,18 @@ public class Main {
 
         CFPDataType cfpDataType = CFPDataType.REAL_NUMBER;
         System.out.println(cfpDataType.isIntegersType());
+
+        Float f = (float)0 * 1;
+        System.out.println(f.compareTo((float)0));
+
+        CFPNumber a = new CFPNumber("0").turnToFloat();
+        CFPNumber tempNum = new CFPNumber("0").turnToFloat();
+        tempNum.add(new CFPNumber("1.0").turnToFloat().sub(new CFPNumber("1.0").turnToFloat()));
+        try {
+            a.div(tempNum);
+        } catch (CFPDivZeroExceptiion cfpDivZeroExceptiion) {
+            System.out.println(cfpDivZeroExceptiion.toUserString());
+        }
+
     }
 }

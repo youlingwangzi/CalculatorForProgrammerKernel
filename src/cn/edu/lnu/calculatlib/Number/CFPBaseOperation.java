@@ -1,5 +1,7 @@
 package cn.edu.lnu.calculatlib.Number;
 
+import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
+
 /**
  * 基础运算定义接口。</br>
  * 该接口定义了五种基础算数运算。
@@ -19,7 +21,7 @@ public interface CFPBaseOperation <T> {
      * @param a 减数
      * @return this-a的差
      */
-    T sub(T a);
+    T sub(T a) throws CFPDivZeroExceptiion;
 
     /**
      * 乘法操作，置this的值为this*a，并返回this*a的值。
@@ -33,7 +35,7 @@ public interface CFPBaseOperation <T> {
      * @param a 被除数
      * @return this/a的商
      */
-    T div(T a);
+    T div(T a) throws CFPDivZeroExceptiion;
 
     /**
      * 取相反数操作，置this的值为-this，并返回-this的值。
