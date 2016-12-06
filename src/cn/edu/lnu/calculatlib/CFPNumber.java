@@ -382,6 +382,8 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     /**
      * 切换数据类型置 Long 类型。
+     *
+     * @return 转换后的 CFPNumber 对象
      */
     public CFPNumber turnToLong(){
         turnToRealNumber();
@@ -392,6 +394,8 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     /**
      * 切换数据类型置 Integer 类型。
+     *
+     * @return 转换后的 CFPNumber 对象
      */
     public CFPNumber turnToInteger(){
         turnToRealNumber();
@@ -402,6 +406,8 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     /**
      * 切换数据类型置 Short 类型。
+     *
+     * @return 转换后的 CFPNumber 对象
      */
     public CFPNumber turnToShort(){
         turnToRealNumber();
@@ -412,6 +418,8 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     /**
      * 切换数据类型置 Byte 类型。
+     *
+     * @return 转换后的 CFPNumber 对象
      */
     public CFPNumber turnToByte(){
         turnToRealNumber();
@@ -422,6 +430,8 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     /**
      * 切换数据类型置 RealNumber 类型。
+     *
+     * @return 转换后的 CFPNumber 对象
      */
     public CFPNumber turnToRealNumber(){
         switch (dataType){
@@ -437,6 +447,8 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     /**
      * 切换数据类型置 Double 类型。
+     *
+     * @return 转换后的 CFPNumber 对象
      */
     public CFPNumber turnToDouble(){
         turnToRealNumber();
@@ -447,6 +459,8 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     /**
      * 切换数据类型置 Float 类型。
+     *
+     * @return 转换后的 CFPNumber 对象
      */
     public CFPNumber turnToFloat(){
         turnToRealNumber();

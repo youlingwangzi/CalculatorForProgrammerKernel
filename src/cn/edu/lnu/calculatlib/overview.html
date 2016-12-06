@@ -60,7 +60,7 @@
 </head>
 <body>
 应用【程序员计算器】的计算内核，他提供了各种数据类型的进制转换、基础运算、部分数据类型逻辑运算的操作。</br>
-<div class="markdown-body ng-scope">文档生成时间：<code>Mon, 06 Dec 2016 09:43:32 UTC+8:00</code></div>
+<div class="markdown-body ng-scope">文档生成时间：<code>Mon, 06 Dec 2016 12:18 UTC+8:00</code></div>
 @version 0.9.1beta
 @author youlingwangzi
 <div class="blobmd">
@@ -68,6 +68,7 @@
     <h2 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-xiang-mu-jian-jie" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-xiang-mu-jian-jie" rel="nofollow noopener noreferrer"></a>项目简介</h2>
     <p class="ng-scope">这是安卓应用 <code>程序员计算器</code> 的计算内核源代码，应用<code>程序员计算器</code> 你可以在 <a href="http://app.mi.com/details?id=com.example.calculatorforprogrammer" rel="nofollow noopener noreferrer">这里</a> 找到。</p>
     <p class="ng-scope">代码提供了<code>long</code>、<code>int</code>、<code>short</code>、<code>byte</code>、<code>real number（实数）</code>、<code>double</code>、<code>float</code>七种数据类型的进制转换、基础算术运算和部分数据类型的逻辑运算操作。并且支持在七种数据类型之间转换。</p>
+    <p class="ng-scope">详细API目录参见：<a href="http://yuanxiaokun.xyz/cfp_kernel_doc/" rel="nofollow noopener noreferrer">CFP_Kernel_Document</a>。</p>
     <h2 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-lei-xing-jian-jie" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-lei-xing-jian-jie" rel="nofollow noopener noreferrer"></a>类型简介</h2>
     <ul class="ng-scope">
         <li><code>CFPNumber</code> 类</li>
@@ -115,10 +116,15 @@
     <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-qi-ta-shuo-ming" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-qi-ta-shuo-ming" rel="nofollow noopener noreferrer"></a>其他说明</h3>
     <ul class="ng-scope">
         <li>对于数据类型转换过程的溢出，将直接按溢出后的结果转换。</li>
-    </ul></div><!-- end ngIf: readme.previewed -->
+    </ul>
+    <h2 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-geng-xin-ri-zhi" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-geng-xin-ri-zhi" rel="nofollow noopener noreferrer"></a>更新日志</h2>
+    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta" rel="nofollow noopener noreferrer"></a>0.9.1beta</h3>
+    <ol class="ng-scope">
+        <li>添加 <code>CFPDivZeroException</code> 异常，当执行 <code>div</code>、<code>mod</code> 运算除数为零时抛出此异常。</li>
+        <li>更改 <code>CFPNumber</code> 类数据类型转换返回值，更改后返回 <code>CFPNumber</code> 对象。</li>
+    </ol></div><!-- end ngIf: readme.previewed -->
     <!-- ngIf: !readme.previewed -->
 </div>
-
 
 </body>
 </html>
