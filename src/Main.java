@@ -1,5 +1,3 @@
-package cn.edu.lnu;
-
 import cn.edu.lnu.calculatlib.CFPDataType;
 import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
 import cn.edu.lnu.calculatlib.CFPNumber;
