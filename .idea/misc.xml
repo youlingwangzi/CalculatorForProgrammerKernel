@@ -40,7 +40,7 @@
   </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" value="D:/YuanXiaokun's blog/yuanxiaokun.github.com/cfp_kernel_doc" />
-    <option name="OPTION_SCOPE" value="public" />
+    <option name="OPTION_SCOPE" value="private" />
     <option name="OPTION_HIERARCHY" value="true" />
     <option name="OPTION_NAVIGATOR" value="true" />
     <option name="OPTION_INDEX" value="true" />
