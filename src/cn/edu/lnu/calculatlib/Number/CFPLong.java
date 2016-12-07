@@ -89,12 +89,42 @@ public class CFPLong implements CFPBaseOperation<CFPLong>, CFPLogicOperation<CFP
     /**
      * 将无符号字符串转换成CFPLong。
      * @param s 要转换的字符串
-     * @param radix 字符串采用的进制
      * @return 返回转换后的CFPLong类型对象
      */
-    public CFPLong parseUnsignedLong(String s, int radix){
-        this.longNumber = Long.parseUnsignedLong(s, radix);
+    public CFPLong parseUnsignedLong(String s){
+        StringBuilder stringBuilder = new StringBuilder(s);
+        if(!(s.length() == 64))
+        {
+            int n = 64 - stringBuilder.length();
+            while (n-- != 0){
+                stringBuilder.insert(0,"0");
+            }
+        }
+        this.longNumber = parseFullUnsignedLong(stringBuilder.toString());
         return this;
+    }
+
+    /**
+     * 在java1.8之前，没有将无符号的二进制字符串转换成long类型的整数的API，
+     * 所以在此写了将无符号二进制字符串装换成long类型整数的函数，
+     * 函数功能同java1.8之后的Long类中的public static long parseUnsignedLong(String s,
+     * int radix)
+     * throws NumberFormatException 当其Radix参数设置为2时的函数。
+     *
+     * @param string 需要转换的二进制字符串
+     * @return 返回一个long类型的基础数据类型数据
+     */
+    private long parseFullUnsignedLong(String string) {
+        StringBuilder stringBuilder = new StringBuilder(string);
+        if (stringBuilder.charAt(0) == '1') {
+            stringBuilder.setCharAt(0, '-');
+            for (int i = 1; i < stringBuilder.length(); i++) {
+                if (stringBuilder.charAt(i) == '1')
+                    stringBuilder.setCharAt(i, '0');
+                else stringBuilder.setCharAt(i, '1');
+            }
+            return Long.parseLong(stringBuilder.toString(), 2) - 1;
+        } else return Long.parseLong(stringBuilder.toString(), 2);
     }
 
     /**

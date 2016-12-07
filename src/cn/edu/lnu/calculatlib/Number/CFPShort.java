@@ -95,19 +95,42 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
     /**
      * 将无符号字符串转换成CFPShort。
      * @param s 要转换的字符串
-     * @param radix 字符串采用的进制
      * @return 返回转换后的CFPShort类型对象
      */
-    public CFPShort parseUnsignedShort(String s, int radix){
-        if (s.charAt(0) == '1' && s.length() == 16){
-            StringBuilder stringBuilder = new StringBuilder(this.toBinString());
-            int n = 32 - stringBuilder.length();
+    public CFPShort parseUnsignedShort(String s){
+        StringBuilder stringBuilder = new StringBuilder(s);
+        if(!(s.length() == 16))
+        {
+            int n = 16 - stringBuilder.length();
             while (n-- != 0){
-                stringBuilder.insert(0,"1");
+                stringBuilder.insert(0,"0");
             }
         }
-        this.shortNumber = (short)Integer.parseUnsignedInt(s, radix);
+        this.shortNumber = parseFullUnsignedShort(stringBuilder.toString());
         return this;
+    }
+
+    /**
+     * 在java1.8之前，没有将无符号的二进制字符串转换成 short 类型的整数的API，
+     * 所以在此写了将无符号二进制字符串装换成 short 类型整数的函数，
+     * 函数功能同java1.8之后的 Short 类中的public static short parseUnsignedShort(String s,
+     * int radix)
+     * throws NumberFormatException 当其Radix参数设置为2时的函数。
+     *
+     * @param string 需要转换的二进制字符串
+     * @return 返回一个 short 类型的基础数据类型数据
+     */
+    private short parseFullUnsignedShort(String string) {
+        StringBuilder stringBuilder = new StringBuilder(string);
+        if (stringBuilder.charAt(0) == '1') {
+            stringBuilder.setCharAt(0, '-');
+            for (int i = 1; i < stringBuilder.length(); i++) {
+                if (stringBuilder.charAt(i) == '1')
+                    stringBuilder.setCharAt(i, '0');
+                else stringBuilder.setCharAt(i, '1');
+            }
+            return (short)(Short.parseShort(stringBuilder.toString(), 2) - 1);
+        } else return Short.parseShort(stringBuilder.toString(), 2);
     }
 
     /**

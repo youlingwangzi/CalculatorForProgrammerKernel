@@ -18,21 +18,45 @@ public class Main {
         System.out.println(cfpShort1.toFullBinatyString());
         System.out.println(cfpShort1.parseUnsignedShort("1111111111101111",2).toDecString());*/
 
-/*        CFPByte cfpShort1 = new CFPByte((byte)111);
+        CFPByte cfpByte1 = new CFPByte((byte)111);
+        System.out.println("hex："+cfpByte1.toHexString());
+        System.out.println("dec："+cfpByte1.toDecString());
+        System.out.println("oct："+cfpByte1.toOctString());
+        System.out.println("bin："+cfpByte1.toBinString());
+        System.out.println("full："+cfpByte1.toFullBinatyString());
+        System.out.println("byte s to byte："+cfpByte1.parseUnsignedByte("11101111").toDecString());
+
+        CFPShort cfpShort1 = new CFPShort((byte)111);
         System.out.println("hex："+cfpShort1.toHexString());
         System.out.println("dec："+cfpShort1.toDecString());
         System.out.println("oct："+cfpShort1.toOctString());
         System.out.println("bin："+cfpShort1.toBinString());
         System.out.println("full："+cfpShort1.toFullBinatyString());
-        System.out.println("s to byte："+cfpShort1.parseUnsignedByte("1101111",2).toDecString());
+        System.out.println("short s to byte："+cfpShort1.parseUnsignedShort("1111111111101111").toDecString());
 
-        CFPDouble cfpDouble = new CFPDouble(-608798.123);
+        CFPLong cfpLong1 = new CFPLong(111);
+        System.out.println("hex：" +cfpLong1.toHexString());
+        System.out.println("dec：" +cfpLong1.toDecString());
+        System.out.println("oct：" +cfpLong1.toOctString());
+        System.out.println("bin：" +cfpLong1.toBinString());
+        System.out.println("full："+cfpLong1.toFullBinatyString());
+        System.out.println("long s to byte："+cfpLong1.parseUnsignedLong("1101111").toDecString());
+
+        CFPInteger cfpInteger1 = new CFPInteger(111);
+        System.out.println("hex：" +cfpInteger1.toHexString());
+        System.out.println("dec：" +cfpInteger1.toDecString());
+        System.out.println("oct：" +cfpInteger1.toOctString());
+        System.out.println("bin：" +cfpInteger1.toBinString());
+        System.out.println("full："+cfpInteger1.toFullBinatyString());
+        System.out.println("int s to byte："+cfpInteger1.parseUnsignedInt("11111111111111111111111111101111").toDecString());
+
+        /*CFPDouble cfpDouble = new CFPDouble(-608798.123);
         System.out.println("hex："+cfpDouble.toHexString());
         System.out.println("dec："+cfpDouble.toDecString());
         System.out.println("oct："+cfpDouble.toOctString());
         System.out.println("bin："+cfpDouble.toBinString());*/
 
- /*       CFPRealNumber cfpRealNumber = new CFPRealNumber("-1342");
+/*        CFPRealNumber cfpRealNumber = new CFPRealNumber("-1342");
         System.out.println("hex："+cfpRealNumber.toHexString());
         System.out.println("dec："+cfpRealNumber.toDecString());
         System.out.println("oct："+cfpRealNumber.toOctString());
@@ -56,10 +80,10 @@ public class Main {
             a.div(tempNum);
         } catch (CFPDivZeroExceptiion cfpDivZeroExceptiion) {
             System.out.println(cfpDivZeroExceptiion.toUserString());
-        }
-        */
+        }*/
 
-        CFPByte along = new CFPByte((byte) 15);
+
+/*        CFPByte along = new CFPByte((byte) 15);
         CFPByte blong = new CFPByte((byte) 17);
         try {
             along = (CFPByte) blong.clone();
@@ -93,7 +117,7 @@ public class Main {
             e.printStackTrace();
         }
         aNumber.setNumber("15");
-        System.out.println("a:"+aNumber.toDecString()+"  b:"+bNumber.toDecString());
+        System.out.println("a:"+aNumber.toDecString()+"  b:"+bNumber.toDecString());*/
 
 
     }

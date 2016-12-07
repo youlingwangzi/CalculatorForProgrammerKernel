@@ -271,10 +271,10 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
      */
     public CFPNumber parseUnsignedBinary(String s){
         switch (dataType){
-            case LONG:        longNumber.parseUnsignedLong(s, 2); break;
-            case INTEGER:  integerNumBer.parseUnsignedInt(s, 2); break;
-            case SHORT:      shortNumber.parseUnsignedShort(s, 2); break;
-            case BYTE:        byteNumber.parseUnsignedByte(s, 2); break;
+            case LONG:        longNumber.parseUnsignedLong(s); break;
+            case INTEGER:  integerNumBer.parseUnsignedInt(s); break;
+            case SHORT:      shortNumber.parseUnsignedShort(s); break;
+            case BYTE:        byteNumber.parseUnsignedByte(s); break;
         }
         return this;
     }
