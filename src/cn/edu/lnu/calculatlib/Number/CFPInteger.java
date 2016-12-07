@@ -7,7 +7,8 @@ import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
  * Created by youlingwangzi on 2016/12/2.
  * @author yuanxiaokun
  */
-public class CFPInteger implements CFPBaseOperation <CFPInteger>, CFPLogicOperation<CFPInteger>, CFPRadixConversion {
+public class CFPInteger implements CFPBaseOperation <CFPInteger>,
+        CFPLogicOperation<CFPInteger>, CFPRadixConversion,Cloneable {
 
     /**
      * 数据是以标准库Integer类型存储，在此基础上提供额外的操作。
@@ -20,6 +21,19 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>, CFPLogicOperat
      */
     public CFPInteger(int a){
         integerNumber = a;
+    }
+
+    /**
+     * 克隆函数。
+     * @return 克隆后的对象
+     * @throws CloneNotSupportedException 当不支持克隆操作的时候抛出此异常
+     */
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        CFPInteger a;
+        a = (CFPInteger) super.clone();
+        a.integerNumber = integerNumber;
+        return a;
     }
 
     @Override
@@ -50,6 +64,11 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>, CFPLogicOperat
             stringBuilder.insert(0,"0");
         }
         return stringBuilder.toString();
+    }
+
+    @Override
+    public String toString() {
+        return this.toDecString();
     }
 
     /**

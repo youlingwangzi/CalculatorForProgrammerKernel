@@ -7,7 +7,7 @@ import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
-public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion {
+public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion,Cloneable {
 
     /**
      * 数据是以标准库Double类型存储，在此基础上提供额外的操作。
@@ -20,6 +20,19 @@ public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion
      */
     public CFPDouble(double a){
         doubleNumber = a;
+    }
+
+    /**
+     * 克隆函数。
+     * @return 克隆后的对象
+     * @throws CloneNotSupportedException 当不支持克隆操作的时候抛出此异常
+     */
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        CFPDouble a;
+        a = (CFPDouble) super.clone();
+        a.doubleNumber = doubleNumber;
+        return a;
     }
 
     @Override
@@ -50,6 +63,11 @@ public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion
             stringBuilder.insert(0,"0");
         }
         return stringBuilder.toString();
+    }
+
+    @Override
+    public String toString() {
+        return this.toDecString();
     }
 
     /**

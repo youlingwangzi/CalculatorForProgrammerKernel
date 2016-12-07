@@ -7,7 +7,7 @@ import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
-public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFPByte>,CFPRadixConversion {
+public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFPByte>,CFPRadixConversion, Cloneable {
 
     /**
      * 数据是以标准库Byte类型存储，在此基础上提供额外的操作。
@@ -20,6 +20,19 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
      */
     public CFPByte(byte a){
         byteNumbger = a;
+    }
+
+    /**
+     * 克隆函数。
+     * @return 克隆后的对象
+     * @throws CloneNotSupportedException 当不支持克隆操作的时候抛出此异常
+     */
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        CFPByte a;
+        a = (CFPByte) super.clone();
+        a.byteNumbger = byteNumbger;
+        return a;
     }
 
     @Override
@@ -68,6 +81,11 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
             stringBuilder.insert(0,"0");
         }
         return stringBuilder.toString();
+    }
+
+    @Override
+    public String toString() {
+        return this.toDecString();
     }
 
     /**

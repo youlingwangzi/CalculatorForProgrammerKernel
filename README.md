@@ -99,6 +99,13 @@ eg：`-1342.598`转换为`-10100111110.10011001000101101……`；
 
 ## 更新日志
 
+### 0.9.5beta
+
+1. 所有数据类实现 `Cloneable` 接口。
+2. 所有数据类添加 `toStringa()` 方法，返回数的十进制字符串。
+3. `CFPNumber` 类增加参数为 `int`、`float` 的构造函数。
+4. `CFPNumber` 类 `compareTo()` 函数增加在比较前的强制类型转换。
+
 ### 0.9.4beta
 
 1. `CFPNumber` 类增加 `public CFPDataType getDataType()` 函数。

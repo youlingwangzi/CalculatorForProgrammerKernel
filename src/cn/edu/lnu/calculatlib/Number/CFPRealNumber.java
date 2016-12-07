@@ -10,7 +10,7 @@ import java.math.BigInteger;
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
-public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixConversion{
+public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixConversion, Cloneable{
 
     /**
      * 数据是以标准库BigDecimal类型存储，在此基础上提供额外的操作。
@@ -38,6 +38,19 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
      */
     public CFPRealNumber(String s){
         bigDecimalNumber = new BigDecimal(s);
+    }
+
+    /**
+     * 克隆函数。
+     * @return 克隆后的对象
+     * @throws CloneNotSupportedException 当不支持克隆操作的时候抛出此异常
+     */
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        CFPRealNumber a;
+        a = (CFPRealNumber)super.clone();
+        a.bigDecimalNumber = new BigDecimal(bigDecimalNumber.toString());
+        return a;
     }
 
     /**
@@ -204,6 +217,16 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         return s.toString();
     }
 
+    @Override
+    public String toFullBinatyString() {
+        return this.toBinString();
+    }
+
+    @Override
+    public String toString() {
+        return this.toDecString();
+    }
+
     /**
      * 将实数小数部分转换成二进制。如果没有小数部分，则返回空字符串。
      * @return 转换后的字符串
@@ -253,11 +276,6 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
             s.insert(0,i);
         }while (!integerPart.equals(BigInteger.ZERO));
         return s.toString();
-    }
-
-    @Override
-    public String toFullBinatyString() {
-        return this.toBinString();
     }
 
     /**

@@ -2,12 +2,16 @@ package cn.edu.lnu.calculatlib.Number;
 
 import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
 
+import javax.xml.crypto.dsig.spec.XPathFilterParameterSpec;
+import java.math.BigDecimal;
+
 /**
  * Short类型封装类，提供了Short类型基础的进制转换、运算等操作。</br>
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
-public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<CFPShort>, CFPRadixConversion{
+public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<CFPShort>,
+        CFPRadixConversion, Cloneable{
 
     /**
      * 数据是以标准库Short类型存储，在此基础上提供额外的操作。
@@ -20,6 +24,19 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
      */
     public CFPShort(short a){
         shortNumber = a;
+    }
+
+    /**
+     * 克隆函数。
+     * @return 克隆后的对象
+     * @throws CloneNotSupportedException 当不支持克隆操作的时候抛出此异常
+     */
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        CFPShort a;
+        a = (CFPShort) super.clone();
+        a.shortNumber = shortNumber;
+        return a;
     }
 
     @Override
@@ -60,6 +77,7 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
         }
     }
 
+    @Override
     public String toFullBinatyString(){
         StringBuilder stringBuilder = new StringBuilder(this.toBinString());
         int n = 16 - stringBuilder.length();
@@ -67,6 +85,11 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
             stringBuilder.insert(0,"0");
         }
         return stringBuilder.toString();
+    }
+
+    @Override
+    public String toString() {
+        return this.toDecString();
     }
 
     /**

@@ -7,7 +7,7 @@ import cn.edu.lnu.calculatlib.Number.*;
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
-public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation<CFPNumber>, CFPRadixConversion{
+public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation<CFPNumber>, CFPRadixConversion, Cloneable{
 
     /**
      * Long类型内部存储结构。
@@ -44,7 +44,25 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
     private CFPDataType dataType = CFPDataType.REAL_NUMBER;
 
     /**
-     * 构造函数，默认构造Long型数据。
+     * 构造函数，构造Integer型数据。
+     * @param a 要设置的值
+     */
+    public CFPNumber(int a){
+        integerNumBer.setIntegerNumber(a);
+        this.setDataType(CFPDataType.INTEGER);
+    }
+
+    /**
+     * 构造函数，构造Integer型数据。
+     * @param a 要设置的值
+     */
+    public CFPNumber(float a){
+        floatNumber.setFloatNumber(a);
+        this.setDataType(CFPDataType.FLOAT);
+    }
+
+    /**
+     * 构造函数，构造RealNumber型数据。
      * @param s 要设置的值
      */
     public CFPNumber(String s){
@@ -60,6 +78,32 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
         realNumber.setBigDecimalNumber(s);
         this.setDataType(dataType);
     }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        CFPNumber a;
+        a = (CFPNumber) super.clone();
+        a.dataType = dataType;
+        switch (dataType){
+            case LONG: a.longNumber =(CFPLong) longNumber.clone();
+                break;
+            case INTEGER: a.integerNumBer =(CFPInteger) integerNumBer.clone();
+                break;
+            case SHORT: a.shortNumber =(CFPShort) shortNumber.clone();
+                break;
+            case BYTE: a.byteNumber =(CFPByte) byteNumber.clone();
+                break;
+            case REAL_NUMBER: a.realNumber =(CFPRealNumber) realNumber.clone();
+                break;
+            case DOUBLE: a.doubleNumber =(CFPDouble) doubleNumber.clone();
+                break;
+            case FLOAT: a.floatNumber =(CFPFloat) floatNumber.clone();
+                break;
+        }
+
+        return a;
+    }
+
 
     /**
      * 根据当前数据类型设置当前数据。会自动根据数据类型进行数据转换。
@@ -215,6 +259,11 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
         return s;
     }
 
+    @Override
+    public String toString() {
+        return this.toDecString();
+    }
+
     /**
      * 将无符号二进制字符串转换成 CFPNumber ，仅对整形数据有效。
      * @param s 要转换的字符串
@@ -238,15 +287,11 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
         if (!a.getDataType().equals(this.dataType)){
             a.setDataType(this.dataType);
         }
-        try {
-            switch (dataType){
-                case LONG:        longNumber.mod(a.getLongNumber()); break;
-                case INTEGER:  integerNumBer.mod(a.getIntegerNumBer()); break;
-                case SHORT:      shortNumber.mod(a.getShortNumber()); break;
-                case BYTE:        byteNumber.mod(a.getByteNumber()); break;
-            }
-        }catch (CFPDivZeroExceptiion e){
-            throw e;
+        switch (dataType){
+            case LONG:        longNumber.mod(a.getLongNumber()); break;
+            case INTEGER:  integerNumBer.mod(a.getIntegerNumBer()); break;
+            case SHORT:      shortNumber.mod(a.getShortNumber()); break;
+            case BYTE:        byteNumber.mod(a.getByteNumber()); break;
         }
         return this;
     }
@@ -472,6 +517,9 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
 
     @Override
     public int compareTo(CFPNumber a) {
+        if (!a.getDataType().equals(this.dataType)){
+            a.setDataType(this.dataType);
+        }
         int result = 0;
         switch (dataType){
             case LONG:        result = longNumber.compareTo(a.getLongNumber()); break;
