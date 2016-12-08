@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0ca95676-4a3f-4c84-8f1a-69ec55bd8b5f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="CalculateLib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="58" column="61" lean-forward="true" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
+            <state relative-caret-position="280">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -80,12 +79,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="285">
-                <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <first_editor relative-caret-position="1560">
+                <caret line="104" column="31" lean-forward="false" selection-start-line="104" selection-start-column="31" selection-end-line="104" selection-end-column="31" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -96,8 +95,8 @@
       <file leaf-file-name="CFPNumber.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+            <state relative-caret-position="406">
+              <caret line="96" column="22" lean-forward="true" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
               <folding>
                 <element signature="e#1539#1540#0" expanded="true" />
                 <element signature="e#1588#1589#0" expanded="true" />
@@ -107,6 +106,18 @@
                 <element signature="e#3351#3352#0" expanded="true" />
                 <element signature="e#3459#3460#0" expanded="true" />
                 <element signature="e#3492#3493#0" expanded="true" />
+                <marker date="1481163554651" expanded="false" signature="3599:3610" ph=" { " />
+                <marker date="1481163554651" expanded="false" signature="3628:3634" ph=" }" />
+                <marker date="1481163554651" expanded="false" signature="3744:3755" ph=" { " />
+                <marker date="1481163554651" expanded="false" signature="3774:3780" ph=" }" />
+                <marker date="1481163554651" expanded="false" signature="3904:3915" ph=" { " />
+                <marker date="1481163554651" expanded="false" signature="3933:3939" ph=" }" />
+                <marker date="1481163554651" expanded="false" signature="4053:4064" ph=" { " />
+                <marker date="1481163554651" expanded="false" signature="4084:4090" ph=" }" />
+                <marker date="1481163554651" expanded="false" signature="4200:4211" ph=" { " />
+                <marker date="1481163554651" expanded="false" signature="4230:4236" ph=" }" />
+                <marker date="1481163554651" expanded="false" signature="7496:7507" ph=" { " />
+                <marker date="1481163554651" expanded="false" signature="7533:7539" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -197,9 +208,9 @@
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLong.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPByte.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -914,7 +925,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481161147919</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="修复CFPNumber整型浮点型参数构造函数问题。">
+      <created>1481162026074</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1481162026074</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1001,7 +1019,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="更改数据类型枚举类的类名。" />
     <MESSAGE value="完成预定所有基础建设。进入注释编写和测试。" />
     <MESSAGE value="完成接口的注释。生成文档。" />
     <MESSAGE value="完善注释，更新编写readme文档。" />
@@ -1026,7 +1043,8 @@
     <MESSAGE value="生成API文档。" />
     <MESSAGE value="去除不必要的包导入。" />
     <MESSAGE value="修复CFPNumber setNumber函数问题。修复循环位移方向相反问题。" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复CFPNumber setNumber函数问题。修复循环位移方向相反问题。" />
+    <MESSAGE value="修复CFPNumber整型浮点型参数构造函数问题。" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复CFPNumber整型浮点型参数构造函数问题。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1318,20 +1336,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1345,8 +1354,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+        <state relative-caret-position="406">
+          <caret line="96" column="22" lean-forward="true" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
           <folding>
             <element signature="e#1539#1540#0" expanded="true" />
             <element signature="e#1588#1589#0" expanded="true" />
@@ -1356,15 +1365,36 @@
             <element signature="e#3351#3352#0" expanded="true" />
             <element signature="e#3459#3460#0" expanded="true" />
             <element signature="e#3492#3493#0" expanded="true" />
+            <marker date="1481163554651" expanded="false" signature="3599:3610" ph=" { " />
+            <marker date="1481163554651" expanded="false" signature="3628:3634" ph=" }" />
+            <marker date="1481163554651" expanded="false" signature="3744:3755" ph=" { " />
+            <marker date="1481163554651" expanded="false" signature="3774:3780" ph=" }" />
+            <marker date="1481163554651" expanded="false" signature="3904:3915" ph=" { " />
+            <marker date="1481163554651" expanded="false" signature="3933:3939" ph=" }" />
+            <marker date="1481163554651" expanded="false" signature="4053:4064" ph=" { " />
+            <marker date="1481163554651" expanded="false" signature="4084:4090" ph=" }" />
+            <marker date="1481163554651" expanded="false" signature="4200:4211" ph=" { " />
+            <marker date="1481163554651" expanded="false" signature="4230:4236" ph=" }" />
+            <marker date="1481163554651" expanded="false" signature="7496:7507" ph=" { " />
+            <marker date="1481163554651" expanded="false" signature="7533:7539" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="58" column="61" lean-forward="true" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1560">
+            <caret line="104" column="31" lean-forward="false" selection-start-line="104" selection-start-column="31" selection-end-line="104" selection-end-column="31" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
