@@ -59,8 +59,8 @@
 </head>
 <body>
 应用【程序员计算器】的计算内核，他提供了各种数据类型的进制转换、基础运算、部分数据类型逻辑运算的操作。</br>
-<div class="markdown-body ng-scope">文档生成时间：<code>Mon, 07 Dec 2016 17:17 UTC+8:00</code></div>
-@version 0.9.6beta
+<div class="markdown-body ng-scope">文档生成时间：<code>Mon, 08 Dec 2016 10:30 UTC+8:00</code></div>
+@version 0.9.7beta
 @author youlingwangzi
 
 <div class="blobmd">
@@ -124,33 +124,39 @@
         <li>当两个 <code>CFPNumber</code> 类对象进行基本算术运算或者逻辑运算时，如果两个对象数据类型不同， 则会将被作为传入参数的对象的数据类型强制转换为调用者的类型。eg：a.add(b)，如果a、b类型不同， 则会将b的类型强制转换为a的类型参与运算。</li>
     </ul>
     <h2 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-geng-xin-ri-zhi" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-geng-xin-ri-zhi" rel="nofollow noopener noreferrer"></a>更新日志</h2>
-    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta" rel="nofollow noopener noreferrer"></a>0.9.6beta</h3>
+    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta" rel="nofollow noopener noreferrer"></a>0.9.7beta</h3>
+    <ol class="ng-scope">
+        <li>修复循环位移方向相反错误。</li>
+        <li>修复 <code>CFPNumber</code> 类 <code>setNumber</code> 函数问题。</li>
+        <li>修复 <code>CFPNumber</code> 类整型浮点型构造函数问题。</li>
+    </ol>
+    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta-1" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta-1" rel="nofollow noopener noreferrer"></a>0.9.6beta</h3>
     <ol class="ng-scope">
         <li>解除对 <code>Java 8 API</code> 的依赖。</li>
     </ol>
-    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta-1" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta-1" rel="nofollow noopener noreferrer"></a>0.9.5beta</h3>
+    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta-2" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta-2" rel="nofollow noopener noreferrer"></a>0.9.5beta</h3>
     <ol class="ng-scope">
         <li>所有数据类实现 <code>Cloneable</code> 接口。</li>
         <li>所有数据类添加 <code>toStringa()</code> 方法，返回数的十进制字符串。</li>
         <li><code>CFPNumber</code> 类增加参数为 <code>int</code>、<code>float</code> 的构造函数。</li>
         <li><code>CFPNumber</code> 类 <code>compareTo()</code> 函数增加在比较前的强制类型转换。</li>
     </ol>
-    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta-2" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta-2" rel="nofollow noopener noreferrer"></a>0.9.4beta</h3>
+    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta-3" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta-3" rel="nofollow noopener noreferrer"></a>0.9.4beta</h3>
     <ol class="ng-scope">
         <li><code>CFPNumber</code> 类增加 <code>public CFPDataType getDataType()</code> 函数。</li>
         <li><code>CFPBaseOperation</code> 接口增加 <code>int compareTo(T a)</code> 函数，相关类已全部实现该操作。</li>
         <li>增加 <code>CFPNonsupportedOperation</code> 异常，当对于 <code>CFPNumber</code> 对象数据类型设置为非整数类型，且试图执行不支持的逻辑运算操作时，抛出此异常。</li>
         <li><code>CFPNumber</code> 类做双目运算时加入数据类型转换。</li>
     </ol>
-    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta-3" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta-3" rel="nofollow noopener noreferrer"></a>0.9.3beta</h3>
+    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta-4" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta-4" rel="nofollow noopener noreferrer"></a>0.9.3beta</h3>
     <ol class="ng-scope">
         <li><code>CFPNumber</code> 类增加 <code>public CFPNumber setNumber(String s)</code> 、 <code>public CFPNumber setDataType(CFPDataType dataType)</code> 方法。</li>
     </ol>
-    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta-4" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta-4" rel="nofollow noopener noreferrer"></a>0.9.2beta</h3>
+    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta-5" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta-5" rel="nofollow noopener noreferrer"></a>0.9.2beta</h3>
     <ol class="ng-scope">
         <li><code>CFPNumbwe</code> 类增加 <code>public CFPNumber setNumber(String s)</code> 方法。</li>
     </ol>
-    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta-5" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta-5" rel="nofollow noopener noreferrer"></a>0.9.1beta</h3>
+    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta-6" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta-6" rel="nofollow noopener noreferrer"></a>0.9.1beta</h3>
     <ol class="ng-scope">
         <li>添加 <code>CFPDivZeroException</code> 异常，当执行 <code>div</code>、<code>mod</code> 运算除数为零时抛出此异常。</li>
         <li>更改 <code>CFPNumber</code> 类数据类型转换返回值，更改后返回 <code>CFPNumber</code> 对象。</li>
