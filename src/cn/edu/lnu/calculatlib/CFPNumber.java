@@ -49,7 +49,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
      */
     public CFPNumber(int a){
         integerNumBer.setIntegerNumber(a);
-        this.setDataType(CFPDataType.INTEGER);
+        dataType = CFPDataType.INTEGER;
     }
 
     /**
@@ -58,7 +58,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
      */
     public CFPNumber(float a){
         floatNumber.setFloatNumber(a);
-        this.setDataType(CFPDataType.FLOAT);
+        dataType = CFPDataType.FLOAT;
     }
 
     /**

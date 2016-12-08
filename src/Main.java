@@ -51,8 +51,14 @@ public class Main {
         System.out.println("int s to byte："+cfpInteger1.parseUnsignedInt("11111111111111111111111111101111").toDecString());
         System.out.println("循环右移："+cfpInteger1.lsr(new CFPInteger(1)).toBinString());
 
-        CFPNumber cfpNumber1 = new CFPNumber("111").turnToLong();
-        System.out.println("number置零："+cfpNumber1.setNumber("0"));
+        CFPNumber cfpNumbera = new CFPNumber("111").turnToLong();
+        CFPNumber cfpNumberb = new CFPNumber(10);
+
+        try {
+            System.out.println("number除法："+cfpNumbera.div(cfpNumberb));
+        } catch (CFPDivZeroExceptiion cfpDivZeroExceptiion) {
+            cfpDivZeroExceptiion.printStackTrace();
+        }
 
 
 
