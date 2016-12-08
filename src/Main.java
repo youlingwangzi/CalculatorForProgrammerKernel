@@ -49,6 +49,12 @@ public class Main {
         System.out.println("bin：" +cfpInteger1.toBinString());
         System.out.println("full："+cfpInteger1.toFullBinatyString());
         System.out.println("int s to byte："+cfpInteger1.parseUnsignedInt("11111111111111111111111111101111").toDecString());
+        System.out.println("循环右移："+cfpInteger1.lsr(new CFPInteger(1)).toBinString());
+
+        CFPNumber cfpNumber1 = new CFPNumber("111").turnToLong();
+        System.out.println("number置零："+cfpNumber1.setNumber("0"));
+
+
 
         /*CFPDouble cfpDouble = new CFPDouble(-608798.123);
         System.out.println("hex："+cfpDouble.toHexString());

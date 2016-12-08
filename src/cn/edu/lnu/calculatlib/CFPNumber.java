@@ -111,8 +111,10 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
      * @return 返回设置后的 CFPNumber 对象
      */
     public CFPNumber setNumber(String s){
+        CFPDataType dataType1 = this.dataType;
+        this.turnToRealNumber();
         realNumber.setBigDecimalNumber(s);
-        return this.setDataType(dataType);
+        return this.setDataType(dataType1);
     }
 
     /**
@@ -613,6 +615,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case DOUBLE:        realNumber = doubleNumber.toCFPRealNumber();break;
             case FLOAT:         realNumber = floatNumber.toCFPRealNumber();break;
         }
+        dataType = CFPDataType.REAL_NUMBER;
         return this;
     }
 

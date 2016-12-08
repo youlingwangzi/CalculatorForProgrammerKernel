@@ -225,14 +225,14 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
     }
 
     @Override
-    public CFPByte lsl(CFPByte a) {
+    public CFPByte lsr(CFPByte a) {
         this.byteNumbger =
                 (byte)(this.byteNumbger >>> a.getByteNumbger() | this.byteNumbger << (8 - a.getByteNumbger()));
         return this;
     }
 
     @Override
-    public CFPByte lsr(CFPByte a) {
+    public CFPByte lsl(CFPByte a) {
         this.byteNumbger =
                 (byte)(this.byteNumbger << a.getByteNumbger() | this.byteNumbger >>> (8 - a.getByteNumbger()));
         return this;

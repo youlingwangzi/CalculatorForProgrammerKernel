@@ -226,14 +226,14 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
     }
 
     @Override
-    public CFPShort lsl(CFPShort a) {
+    public CFPShort lsr(CFPShort a) {
         this.shortNumber =
                 (short)(this.shortNumber >>> a.getShortNumber() | this.shortNumber << (16 - a.getShortNumber()));
         return this;
     }
 
     @Override
-    public CFPShort lsr(CFPShort a) {
+    public CFPShort lsl(CFPShort a) {
         this.shortNumber =
                 (short)(this.shortNumber << a.getShortNumber() | this.shortNumber >>> (16 - a.getShortNumber()));
         return this;

@@ -205,14 +205,14 @@ public class CFPLong implements CFPBaseOperation<CFPLong>, CFPLogicOperation<CFP
     }
 
     @Override
-    public CFPLong lsl(CFPLong a) {
+    public CFPLong lsr(CFPLong a) {
         this.longNumber =
                 this.longNumber >>> a.getLongNumber() | this.longNumber << (64 - a.getLongNumber());
         return this;
     }
 
     @Override
-    public CFPLong lsr(CFPLong a) {
+    public CFPLong lsl(CFPLong a) {
         this.longNumber =
                 this.longNumber << a.getLongNumber() | this.longNumber >>> (64 - a.getLongNumber());
         return this;
