@@ -98,6 +98,13 @@ eg：`-1342.598`转换为`-10100111110.10011001000101101……`；
 
 ## 更新日志
 
+### 0.9.8beta
+
+1. 在 `CFPBaseOperation` 接口增加 `addABit` `deleteABit` 函数。整数按照进制直接增加减，小数只能
+十进制增加减一位。
+2. `CFPDouble`、`CFPFloat` 类实现改为继承自 `CFPRealNumber` 类。
+3. `CFPRealNumber` 类增加 scale 精度设置。
+
 ### 0.9.7beta
 
 1. 修复循环位移方向相反错误。

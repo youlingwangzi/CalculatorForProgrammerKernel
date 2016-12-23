@@ -57,7 +57,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
      * @param a 要设置的值
      */
     public CFPNumber(float a){
-        floatNumber.setFloatNumber(a);
+        floatNumber.setBigDecimalNumber(Float.toString(a));
         dataType = CFPDataType.FLOAT;
     }
 
@@ -487,18 +487,14 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
         if (!a.getDataType().equals(this.dataType)){
             a.setDataType(this.dataType);
         }
-        try {
-            switch (dataType){
-                case LONG:        longNumber.div(a.getLongNumber()); break;
-                case INTEGER:  integerNumBer.div(a.getIntegerNumBer()); break;
-                case SHORT:      shortNumber.div(a.getShortNumber()); break;
-                case BYTE:        byteNumber.div(a.getByteNumber()); break;
-                case REAL_NUMBER: realNumber.div(a.getRealNumber()); break;
-                case DOUBLE:    doubleNumber.div(a.getDoubleNumber()); break;
-                case FLOAT:      floatNumber.div(a.getFloatNumber()); break;
-            }
-        }catch (CFPDivZeroExceptiion e){
-            throw e;
+        switch (dataType){
+            case LONG:        longNumber.div(a.getLongNumber()); break;
+            case INTEGER:  integerNumBer.div(a.getIntegerNumBer()); break;
+            case SHORT:      shortNumber.div(a.getShortNumber()); break;
+            case BYTE:        byteNumber.div(a.getByteNumber()); break;
+            case REAL_NUMBER: realNumber.div(a.getRealNumber()); break;
+            case DOUBLE:    doubleNumber.div(a.getDoubleNumber()); break;
+            case FLOAT:      floatNumber.div(a.getFloatNumber()); break;
         }
         return this;
     }
@@ -551,6 +547,27 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case DOUBLE:doubleNumber.addABit(a,radix);
                 break;
             case FLOAT:floatNumber.addABit(a,radix);
+                break;
+        }
+        return this;
+    }
+
+    @Override
+    public CFPNumber deleteABit(int radix) {
+        switch (dataType) {
+            case LONG:longNumber.deleteABit(radix);
+                break;
+            case INTEGER:integerNumBer.deleteABit(radix);
+                break;
+            case SHORT:shortNumber.deleteABit(radix);
+                break;
+            case BYTE:byteNumber.deleteABit(radix);
+                break;
+            case REAL_NUMBER:realNumber.deleteABit(radix);
+                break;
+            case DOUBLE:doubleNumber.deleteABit(radix);
+                break;
+            case FLOAT:floatNumber.deleteABit(radix);
                 break;
         }
         return this;

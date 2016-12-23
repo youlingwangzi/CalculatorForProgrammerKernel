@@ -61,4 +61,8 @@ public class CFPFloat extends CFPRealNumber{
         return this.toDecString();
     }
 
+    public CFPRealNumber toCFPRealNumber(){
+        return new CFPRealNumber(this.getBigDecimalNumber().toString());
+    }
+
 }

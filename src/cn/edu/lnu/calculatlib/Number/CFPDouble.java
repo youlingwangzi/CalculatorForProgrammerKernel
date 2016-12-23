@@ -58,4 +58,8 @@ public class CFPDouble extends CFPRealNumber {
     public String toString() {
         return this.toDecString();
     }
+
+    public CFPRealNumber toCFPRealNumber(){
+        return new CFPRealNumber(this.getBigDecimalNumber().toString());
+    }
 }
