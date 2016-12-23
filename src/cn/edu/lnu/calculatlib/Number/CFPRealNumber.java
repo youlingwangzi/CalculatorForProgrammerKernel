@@ -54,8 +54,31 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
     }
 
     /**
+     * 获取数值精度。
+     */
+    public int getScale() {
+        return bigDecimalNumber.scale();
+    }
+
+    /**
+     * 设置数值精度。
+     * @param scale 要设置的数值精度
+     */
+    public void setScale(int scale) {
+        bigDecimalNumber.setScale(scale);
+    }
+
+    /**
+     * 数值精度加。
+     * @param scale 要增加的数值精度
+     */
+    public void addScale(int scale) {
+        bigDecimalNumber.setScale(bigDecimalNumber.scale() + scale);
+    }
+
+    /**
      * 设置二进制小数精度。
-     * @param binatyScale 要设置的精度
+     * @param binatyScale 要设置的精度scale
      */
     public void setBinatyScale(long binatyScale) {
         this.binatyScale = binatyScale;
@@ -263,6 +286,14 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
     }
 
     /**
+     * 判断当前数值是否为整数
+     * @return 是则true，不是则false
+     */
+    public boolean isIntegerValue(){
+        return this.getBigDecimalNumber().compareTo(new BigDecimal(this.getBigDecimalNumber().toBigInteger())) == 0;
+    }
+
+    /**
      * 将实数整数部分转换成二进制。
      * @return 转换后的字符串
      */
@@ -329,6 +360,19 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
     @Override
     public int compareTo(CFPRealNumber a) {
         return this.bigDecimalNumber.compareTo(a.getBigDecimalNumber());
+    }
+
+    @Override
+    public CFPRealNumber addABit(int a, int radix) {
+        this.setScale(this.getScale() + 1);
+        if (this.getScale() == 0){
+            this.mul(new CFPRealNumber(Integer.toString(radix))).add(new CFPRealNumber(Integer.toString(a)));
+        }else {
+            BigDecimal b = BigDecimal.valueOf(radix).pow(this.getScale());
+            BigDecimal c = BigDecimal.valueOf(a).divide(b);
+            this.add(new CFPRealNumber(c.toString()));
+        }
+        return this;
     }
 
     /**

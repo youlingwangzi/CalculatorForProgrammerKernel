@@ -535,6 +535,27 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
         return result;
     }
 
+    @Override
+    public CFPNumber addABit(int a, int radix) {
+        switch (dataType){
+            case LONG:longNumber.addABit(a,radix);
+                break;
+            case INTEGER:integerNumBer.addABit(a,radix);
+                break;
+            case SHORT:shortNumber.addABit(a,radix);
+                break;
+            case BYTE:byteNumber.addABit(a,radix);
+                break;
+            case REAL_NUMBER:realNumber.addABit(a,radix);
+                break;
+            case DOUBLE:doubleNumber.addABit(a,radix);
+                break;
+            case FLOAT:floatNumber.addABit(a,radix);
+                break;
+        }
+        return this;
+    }
+
     /**
      * 按照传入的参数切换数据类型。
      * @param dataType 要切换的数据类型

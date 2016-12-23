@@ -50,4 +50,10 @@ public interface CFPBaseOperation <T> {
      * @return 返回-1表示this小于a，返回0表示this等于a，返回1表示this大于a。
      */
     int compareTo(T a);
+
+    /**
+     * 数据增加一位函数。
+     * @return 返回增加后的值
+     */
+    T addABit(int a, int radix);
 }

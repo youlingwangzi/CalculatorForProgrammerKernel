@@ -38,7 +38,7 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>,
 
     @Override
     public String toHexString(){
-        return Integer.toHexString(integerNumber);
+        return Integer.toHexString(integerNumber).toUpperCase();
     }
 
     @Override
@@ -172,6 +172,12 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>,
     @Override
     public int compareTo(CFPInteger a) {
         return this.integerNumber.compareTo(a.getIntegerNumber());
+    }
+
+    @Override
+    public CFPInteger addABit(int a, int radix) {
+        this.integerNumber = integerNumber*10 + a;
+        return this;
     }
 
     @Override

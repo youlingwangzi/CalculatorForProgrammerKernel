@@ -37,12 +37,12 @@ public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion
 
     @Override
     public String toHexString() {
-        return Double.toHexString(doubleNumber).toUpperCase();
+        return deleteIdleZero(Double.toHexString(doubleNumber).toUpperCase());
     }
 
     @Override
     public String toDecString() {
-        return doubleNumber.toString();
+        return deleteIdleZero(doubleNumber.toString());
     }
 
     @Override
@@ -68,6 +68,34 @@ public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion
     @Override
     public String toString() {
         return this.toDecString();
+    }
+
+    /**
+     * 清除数据字符串后无意义的零和小数点。
+     * @param s 输入的字符串
+     * @return 去掉无意义的零和小数点的字符串
+     */
+    private String deleteIdleZero(String s){
+        StringBuilder s2 = new StringBuilder(s);
+        int j;
+        for(j = s2.length()-1; j>0; j--) {
+            if (s2.charAt(j) == '0'){
+                s2.deleteCharAt(j);
+            }else {
+                if(s2.charAt(j) == '.')
+                    s2.deleteCharAt(j);
+                break;
+            }
+        }
+        return s2.toString();
+    }
+
+    /**
+     * 判断当前数值是否为整数
+     * @return 是则true，不是则false
+     */
+    public boolean isIntegerValue(){
+        return this.getDoubleNumber().compareTo(Double.valueOf(this.getDoubleNumber().longValue())) == 0;
     }
 
     /**
@@ -130,5 +158,10 @@ public class CFPDouble implements CFPBaseOperation<CFPDouble>,CFPRadixConversion
     @Override
     public int compareTo(CFPDouble a) {
         return this.doubleNumber.compareTo(a.getDoubleNumber());
+    }
+
+    @Override
+    public CFPDouble addABit(int a, int radix) {
+        return null;
     }
 }

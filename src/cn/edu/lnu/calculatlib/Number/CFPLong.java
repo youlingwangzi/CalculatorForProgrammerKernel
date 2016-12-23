@@ -37,7 +37,7 @@ public class CFPLong implements CFPBaseOperation<CFPLong>, CFPLogicOperation<CFP
 
     @Override
     public String toHexString(){
-        return Long.toHexString(longNumber);
+        return Long.toHexString(longNumber).toUpperCase();
     }
 
     @Override
@@ -170,6 +170,12 @@ public class CFPLong implements CFPBaseOperation<CFPLong>, CFPLogicOperation<CFP
     @Override
     public int compareTo(CFPLong a) {
         return this.longNumber.compareTo(a.getLongNumber());
+    }
+
+    @Override
+    public CFPLong addABit(int a, int radix) {
+        this.longNumber = longNumber*10 + a;
+        return this;
     }
 
     @Override

@@ -38,9 +38,9 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
     @Override
     public String toHexString() {
         if(byteNumbger >= 0)
-            return Integer.toHexString(byteNumbger);
+            return Integer.toHexString(byteNumbger).toUpperCase();
         else{
-            StringBuilder stringBuilder = new StringBuilder(Integer.toHexString(byteNumbger));
+            StringBuilder stringBuilder = new StringBuilder(Integer.toHexString(byteNumbger).toUpperCase());
             return stringBuilder.substring(6);
         }
     }
@@ -189,6 +189,12 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
     @Override
     public int compareTo(CFPByte a) {
         return this.byteNumbger.compareTo(a.getByteNumbger());
+    }
+
+    @Override
+    public CFPByte addABit(int a, int radix) {
+        this.byteNumbger = (byte)(byteNumbger*10 + a);
+        return this;
     }
 
     @Override

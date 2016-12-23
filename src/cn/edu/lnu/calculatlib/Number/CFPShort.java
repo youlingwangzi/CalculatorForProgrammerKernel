@@ -39,9 +39,9 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
     @Override
     public String toHexString() {
         if(shortNumber >= 0)
-            return Integer.toHexString(shortNumber);
+            return Integer.toHexString(shortNumber).toUpperCase();
         else{
-            StringBuilder stringBuilder = new StringBuilder(Integer.toHexString(shortNumber));
+            StringBuilder stringBuilder = new StringBuilder(Integer.toHexString(shortNumber).toUpperCase());
             return stringBuilder.substring(4);
         }
     }
@@ -190,6 +190,12 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
     @Override
     public int compareTo(CFPShort a) {
         return this.shortNumber.compareTo(a.getShortNumber());
+    }
+
+    @Override
+    public CFPShort addABit(int a, int radix) {
+        this.shortNumber = (short)(shortNumber*10 + a);
+        return this;
     }
 
     @Override
