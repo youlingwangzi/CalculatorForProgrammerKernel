@@ -1,58 +1,49 @@
 package cn.edu.lnu.calculatlib.Number;
 
-import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
 
 /**
  * Float类型封装类，提供了Float类型基础的进制转换、运算等操作。</br>
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
-public class CFPFloat implements CFPRadixConversion, CFPBaseOperation<CFPFloat>,Cloneable {
-
-    /**
-     * 数据是以标准库Float类型存储，在此基础上提供额外的操作。
-     */
-    private Float floatNumber;
+public class CFPFloat extends CFPRealNumber{
 
     /**
      * 构造函数。
-     * @param a float型整数。
+     *
+     * @param s 要转换的字符串
      */
-    public CFPFloat(float a){
-        floatNumber = a;
+    public CFPFloat(String s) {
+        super(s);
     }
 
     /**
-     * 克隆函数。
-     * @return 克隆后的对象
-     * @throws CloneNotSupportedException 当不支持克隆操作的时候抛出此异常
+     * 构造函数。
+     *
+     * @param a 要转换的字符串
      */
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        CFPFloat a;
-        a = (CFPFloat) super.clone();
-        a.floatNumber = floatNumber;
-        return a;
+    public CFPFloat(float a) {
+        super(Float.valueOf(a).toString());
     }
 
     @Override
     public String toHexString() {
-        return deleteIdleZero(Float.toHexString(floatNumber).toUpperCase());
+        return Float.toHexString(this.getBigDecimalNumber().floatValue()).toUpperCase();
     }
 
     @Override
     public String toDecString() {
-        return deleteIdleZero(floatNumber.toString());
+        return Float.toString(this.getBigDecimalNumber().floatValue());
     }
 
     @Override
     public String toOctString() {
-        return Integer.toOctalString(Float.floatToIntBits(floatNumber));
+        return Integer.toOctalString(Float.floatToIntBits(this.getBigDecimalNumber().floatValue()));
     }
 
     @Override
     public String toBinString() {
-        return Integer.toBinaryString(Float.floatToIntBits(floatNumber));
+        return Integer.toBinaryString(Float.floatToIntBits(this.getBigDecimalNumber().floatValue()));
     }
 
     @Override
@@ -67,101 +58,7 @@ public class CFPFloat implements CFPRadixConversion, CFPBaseOperation<CFPFloat>,
 
     @Override
     public String toString() {
-        return deleteIdleZero(this.toDecString());
+        return this.toDecString();
     }
 
-    /**
-     * 清除数据字符串后无意义的零和小数点。
-     * @param s 输入的字符串
-     * @return 去掉无意义的零和小数点的字符串
-     */
-    private String deleteIdleZero(String s){
-        StringBuilder s2 = new StringBuilder(s);
-        int j;
-        for(j = s2.length()-1; j>0; j--) {
-            if (s2.charAt(j) == '0'){
-                s2.deleteCharAt(j);
-            }else {
-                if(s2.charAt(j) == '.')
-                    s2.deleteCharAt(j);
-                break;
-            }
-        }
-        return s2.toString();
-    }
-
-    /**
-     * 判断当前数值是否为整数
-     * @return 是则true，不是则false
-     */
-    public boolean isIntegerValue(){
-        return this.getFloatNumber().compareTo(Float.valueOf(this.getFloatNumber().longValue())) == 0;
-    }
-
-    /**
-     * 返回一个Float类型的对象。
-     * @return Float类型的对象
-     */
-    public Float getFloatNumber() {
-        return floatNumber;
-    }
-
-    /**
-     * 设置Double类型对象的值。
-     * @param floatNumber Float类型的对象，置此数的值为次数据
-     */
-    public void setFloatNumber(Float floatNumber) {
-        this.floatNumber = floatNumber;
-    }
-
-    /**
-     * 将CFPFloat类型转换成CFPRealNumber类型。
-     * @return 返回一个CFPRealNumber类型对象
-     */
-    public CFPRealNumber toCFPRealNumber(){
-        return new CFPRealNumber(floatNumber.toString());
-    }
-
-    @Override
-    public CFPFloat add(CFPFloat a) {
-        this.floatNumber += a.getFloatNumber();
-        return this;
-    }
-
-    @Override
-    public CFPFloat sub(CFPFloat a) {
-        this.floatNumber -= a.getFloatNumber();
-        return this;
-    }
-
-    @Override
-    public CFPFloat mul(CFPFloat a) {
-        this.floatNumber *= a.getFloatNumber();
-        return this;
-    }
-
-    @Override
-    public CFPFloat div(CFPFloat a) throws CFPDivZeroExceptiion {
-        if (a.getFloatNumber().compareTo((float)0) == 0){
-            throw new CFPDivZeroExceptiion();
-        }
-        this.floatNumber /= a.getFloatNumber();
-        return this;
-    }
-
-    @Override
-    public CFPFloat opp() {
-        this.floatNumber = -this.floatNumber;
-        return this;
-    }
-
-    @Override
-    public int compareTo(CFPFloat a) {
-        return this.floatNumber.compareTo(a.getFloatNumber());
-    }
-
-    @Override
-    public CFPFloat addABit(int a, int radix) {
-        return null;
-    }
 }
