@@ -53,12 +53,15 @@ public interface CFPBaseOperation <T> {
 
     /**
      * 数据增加一位函数。
+     * @param a 增加的数值
+     * @param radix 进制
      * @return 返回增加后的值
      */
     T addABit(int a, int radix);
 
     /**
      * 数据删除一位函数。
+     * @param radix 进制
      * @return 返回增加后的值
      */
     T deleteABit(int radix);

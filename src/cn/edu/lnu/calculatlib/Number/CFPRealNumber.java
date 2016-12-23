@@ -55,6 +55,8 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
     /**
      * 获取数值精度。
+     *
+     * @return 精度值
      */
     public int getScale() {
         return bigDecimalNumber.scale();
