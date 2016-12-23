@@ -4,10 +4,8 @@
     <option name="SCOPE_TYPE" value="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca95676-4a3f-4c84-8f1a-69ec55bd8b5f" name="Default" comment="">
+    <list default="true" id="0ca95676-4a3f-4c84-8f1a-69ec55bd8b5f" name="Default" comment="完善javadoc注释。">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" afterPath="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" />
     </list>
     <ignored path="CalculateLib.iws" />
@@ -62,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overview.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="overview.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="81" column="45" lean-forward="true" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="45" />
+            <state relative-caret-position="285">
+              <caret line="75" column="38" lean-forward="true" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#6371#6377#0" expanded="true" />
@@ -119,7 +117,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CFPBaseOperation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CFPBaseOperation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -220,9 +218,9 @@
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPDouble.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPFloat.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" />
       </list>
     </option>
   </component>
@@ -485,28 +483,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="calculatlib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CalculateLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CalculateLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calculatlib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Number" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -986,7 +962,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482484483783</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="完善javadoc注释。">
+      <created>1482484831462</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1482484831462</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1009,7 +992,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32689655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32689655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32689655" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21203439" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1073,7 +1056,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="更新文档。更新readme。" />
     <MESSAGE value="将文档独立。本仓库只保留代码。" />
     <MESSAGE value="0.9.1beta&#10;1. 添加 `CFPDivZeroException` 异常，当执行 `div`、`mod` 运算除数为零时抛出此异常。&#10;2. 更改 `CFPNumber` 类数据类型转换返回值，更改后返回 `CFPNumber` 对象。" />
     <MESSAGE value="更正CFPNumber类注释。生成最新文档。" />
@@ -1098,7 +1080,8 @@
     <MESSAGE value="更改Double，Float的实现，继承自RealNumber。" />
     <MESSAGE value="增加deleteABit函数。" />
     <MESSAGE value="更新readme." />
-    <option name="LAST_COMMIT_MESSAGE" value="更新readme." />
+    <MESSAGE value="完善javadoc注释。" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善javadoc注释。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1394,25 +1377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="81" column="45" lean-forward="true" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="45" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#6371#6377#0" expanded="true" />
-            <element signature="e#6383#6389#0" expanded="true" />
-            <element signature="e#6407#6413#0" expanded="true" />
-            <element signature="e#7738#7744#0" expanded="true" />
-            <element signature="e#7748#7754#0" expanded="true" />
-            <element signature="e#7777#7783#0" expanded="true" />
-            <element signature="e#7817#7823#0" expanded="true" />
-            <element signature="e#7826#7832#0" expanded="true" />
-            <element signature="e#7852#7858#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1437,6 +1401,25 @@
         <state relative-caret-position="315">
           <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="75" column="38" lean-forward="true" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#6371#6377#0" expanded="true" />
+            <element signature="e#6383#6389#0" expanded="true" />
+            <element signature="e#6407#6413#0" expanded="true" />
+            <element signature="e#7738#7744#0" expanded="true" />
+            <element signature="e#7748#7754#0" expanded="true" />
+            <element signature="e#7777#7783#0" expanded="true" />
+            <element signature="e#7817#7823#0" expanded="true" />
+            <element signature="e#7826#7832#0" expanded="true" />
+            <element signature="e#7852#7858#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
