@@ -198,6 +198,12 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
     }
 
     @Override
+    public CFPByte deleteABit(int radix) {
+        this.byteNumbger =  (byte)(byteNumbger / radix);
+        return this;
+    }
+
+    @Override
     public CFPByte mod(CFPByte a) throws CFPDivZeroExceptiion {
         if (a.getByteNumbger() == 0){
             throw new CFPDivZeroExceptiion();

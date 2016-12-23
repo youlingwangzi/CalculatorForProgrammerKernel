@@ -364,13 +364,28 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
     @Override
     public CFPRealNumber addABit(int a, int radix) {
-        this.setScale(this.getScale() + 1);
         if (this.getScale() == 0){
             this.mul(new CFPRealNumber(Integer.toString(radix))).add(new CFPRealNumber(Integer.toString(a)));
         }else {
             BigDecimal b = BigDecimal.valueOf(radix).pow(this.getScale());
             BigDecimal c = BigDecimal.valueOf(a).divide(b);
             this.add(new CFPRealNumber(c.toString()));
+            this.setScale(this.getScale() + 1);
+        }
+        return this;
+    }
+
+    @Override
+    public CFPRealNumber deleteABit(int radix) {
+        if (this.getScale() == 0){
+            try {
+                this.div(new CFPRealNumber(Integer.toString(radix)));
+                this.setScale(0);
+            } catch (CFPDivZeroExceptiion cfpDivZeroExceptiion) {
+                cfpDivZeroExceptiion.printStackTrace();
+            }
+        }else {
+            this.setScale(this.getScale() - 1);
         }
         return this;
     }

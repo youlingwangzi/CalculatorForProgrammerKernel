@@ -179,6 +179,12 @@ public class CFPLong implements CFPBaseOperation<CFPLong>, CFPLogicOperation<CFP
     }
 
     @Override
+    public CFPLong deleteABit(int radix) {
+        this.longNumber =  (longNumber / radix);
+        return this;
+    }
+
+    @Override
     public CFPLong mod(CFPLong a) throws CFPDivZeroExceptiion {
         if(a.getLongNumber() == 0)
             throw new CFPDivZeroExceptiion();

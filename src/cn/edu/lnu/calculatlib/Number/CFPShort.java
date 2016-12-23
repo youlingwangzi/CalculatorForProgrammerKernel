@@ -199,6 +199,12 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
     }
 
     @Override
+    public CFPShort deleteABit(int radix) {
+        this.shortNumber = (short)(shortNumber / radix);
+        return this;
+    }
+
+    @Override
     public CFPShort mod(CFPShort a) throws CFPDivZeroExceptiion {
         if (a.getShortNumber() == 0){
             throw new CFPDivZeroExceptiion();

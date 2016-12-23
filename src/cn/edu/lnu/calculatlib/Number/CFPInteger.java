@@ -7,8 +7,7 @@ import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
  * Created by youlingwangzi on 2016/12/2.
  * @author yuanxiaokun
  */
-public class CFPInteger implements CFPBaseOperation <CFPInteger>,
-        CFPLogicOperation<CFPInteger>, CFPRadixConversion,Cloneable {
+public class CFPInteger implements CFPBaseOperation <CFPInteger>, CFPLogicOperation<CFPInteger>, CFPRadixConversion,Cloneable {
 
     /**
      * 数据是以标准库Integer类型存储，在此基础上提供额外的操作。
@@ -177,6 +176,12 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>,
     @Override
     public CFPInteger addABit(int a, int radix) {
         this.integerNumber = integerNumber*10 + a;
+        return this;
+    }
+
+    @Override
+    public CFPInteger deleteABit(int radix) {
+        this.integerNumber =  (integerNumber / radix);
         return this;
     }
 
