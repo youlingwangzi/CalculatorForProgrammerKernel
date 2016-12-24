@@ -33,6 +33,11 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
     private long hexScale = 20;
 
     /**
+     * 精度设置
+     */
+    private int inputScale = 0;
+
+    /**
      * 构造函数。
      * @param s 要转换的字符串
      */
@@ -58,16 +63,20 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
      *
      * @return 精度值
      */
-    public int getScale() {
-        return bigDecimalNumber.scale();
+    public int getInputScale() {
+        return this.inputScale;
     }
 
     /**
      * 设置数值精度。
      * @param scale 要设置的数值精度
      */
-    public void setScale(int scale) {
-        bigDecimalNumber.setScale(scale);
+    public void setInputScale(int scale) {
+        this.inputScale = scale;
+        if (scale == 0)
+            this.bigDecimalNumber = this.bigDecimalNumber.setScale(0, BigDecimal.ROUND_DOWN);
+        else
+            this.bigDecimalNumber = this.bigDecimalNumber.setScale(scale - 1, BigDecimal.ROUND_DOWN);
     }
 
     /**
@@ -122,6 +131,9 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         if(decimalPart.equals(BigDecimal.ZERO)){
             if(bigDecimalNumber.compareTo(BigDecimal.ZERO) == -1)
                 s2.insert(0, "-");
+            if(getInputScale() == 1){
+                s2.append('.');
+            }
             return s2.toString();
         }
 
@@ -148,6 +160,9 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         if(bigDecimalNumber.compareTo(BigDecimal.ZERO) == -1)
             s2.insert(0, "-");
 
+        if(getInputScale() == 1){
+            s2.append('.');
+        }
         return s2.toString();
     }
 
@@ -180,7 +195,10 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
     @Override
     public String toDecString() {
-        return bigDecimalNumber.toString();
+        if (getInputScale() == 1)
+            return bigDecimalNumber.toString() + ".";
+        else
+            return bigDecimalNumber.toString();
     }
 
     @Override
@@ -203,6 +221,9 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         if(decimalPart.equals(BigDecimal.ZERO)){
             if(bigDecimalNumber.compareTo(BigDecimal.ZERO) == -1)
                 s2.insert(0, "-");
+            if(getInputScale() == 1){
+                s2.append('.');
+            }
             return s2.toString();
         }
 
@@ -228,6 +249,10 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
         if(bigDecimalNumber.compareTo(BigDecimal.ZERO) == -1)
             s2.insert(0, "-");
+
+        if(getInputScale() == 1){
+            s2.append('.');
+        }
         return s2.toString();
     }
 
@@ -239,6 +264,9 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
         if(bigDecimalNumber.compareTo(BigDecimal.ZERO) == -1)
             s.insert(0, "-");
+        if(getInputScale() == 1){
+            s.append('.');
+        }
         return s.toString();
     }
 
@@ -324,6 +352,7 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
      */
     public void setBigDecimalNumber(String bigDecimalNumber) {
         this.bigDecimalNumber = new BigDecimal(bigDecimalNumber);
+        this.setInputScale(this.bigDecimalNumber.scale());
     }
 
     @Override
@@ -366,28 +395,28 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
 
     @Override
     public CFPRealNumber addABit(int a, int radix) {
-        if (this.getScale() == 0){
+        if (this.getInputScale() == 0){
             this.mul(new CFPRealNumber(Integer.toString(radix))).add(new CFPRealNumber(Integer.toString(a)));
         }else {
-            BigDecimal b = BigDecimal.valueOf(radix).pow(this.getScale());
+            BigDecimal b = BigDecimal.valueOf(radix).pow(this.getInputScale());
             BigDecimal c = BigDecimal.valueOf(a).divide(b);
             this.add(new CFPRealNumber(c.toString()));
-            this.setScale(this.getScale() + 1);
+            this.setInputScale(this.getInputScale() + 1);
         }
         return this;
     }
 
     @Override
     public CFPRealNumber deleteABit(int radix) {
-        if (this.getScale() == 0){
+        if (this.getInputScale() == 0){
             try {
                 this.div(new CFPRealNumber(Integer.toString(radix)));
-                this.setScale(0);
+                this.setInputScale(0);
             } catch (CFPDivZeroExceptiion cfpDivZeroExceptiion) {
                 cfpDivZeroExceptiion.printStackTrace();
             }
         }else {
-            this.setScale(this.getScale() - 1);
+            this.setInputScale(this.getInputScale() - 1);
         }
         return this;
     }
@@ -429,7 +458,9 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
      * @return 返回CFPDouble类型对象
      */
     public CFPDouble toCFPDouble(){
-        return new CFPDouble(bigDecimalNumber.doubleValue());
+        CFPDouble cfpDouble =  new CFPDouble(bigDecimalNumber.doubleValue());
+        cfpDouble.setInputScale(getInputScale());
+        return cfpDouble;
     }
 
     /**
@@ -437,7 +468,9 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
      * @return 返回CFPFloat类型对象
      */
     public CFPFloat toCFPFloat(){
-        return new CFPFloat(bigDecimalNumber.floatValue());
+        CFPFloat cfpFloat = new CFPFloat(bigDecimalNumber.floatValue());
+        cfpFloat.setInputScale(getInputScale());
+        return cfpFloat;
     }
 
 }

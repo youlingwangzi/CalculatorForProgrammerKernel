@@ -30,11 +30,6 @@ public class CFPDouble extends CFPRealNumber {
     }
 
     @Override
-    public String toDecString() {
-        return Double.valueOf(this.getBigDecimalNumber().doubleValue()).toString();
-    }
-
-    @Override
     public String toOctString() {
         return Long.toOctalString(Double.doubleToLongBits(this.getBigDecimalNumber().longValue()));
     }
@@ -54,12 +49,9 @@ public class CFPDouble extends CFPRealNumber {
         return stringBuilder.toString();
     }
 
-    @Override
-    public String toString() {
-        return this.toDecString();
-    }
-
     public CFPRealNumber toCFPRealNumber(){
-        return new CFPRealNumber(this.getBigDecimalNumber().toString());
+        CFPRealNumber cfpRealNumber = new CFPRealNumber(this.getBigDecimalNumber().toString());
+        cfpRealNumber.setInputScale(getInputScale());
+        return cfpRealNumber;
     }
 }

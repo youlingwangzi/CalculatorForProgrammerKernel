@@ -680,4 +680,50 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
         dataType = CFPDataType.FLOAT;
         return this;
     }
+
+    /**
+     * 获取数值精度。
+     *
+     * @return 精度值
+     */
+    public int getInputScale(){
+        int result = 0;
+        switch (dataType){
+            case REAL_NUMBER: result = realNumber.getInputScale();
+                break;
+            case DOUBLE: result = doubleNumber.getInputScale();
+                break;
+            case FLOAT: result = floatNumber.getInputScale();
+                break;
+        }
+        return result;
+    }
+    /**
+     * 获取数值精度。
+     *
+     * @param scale 要设置的精度
+     */
+    public void setInputScale(int scale){
+        switch (dataType){
+            case REAL_NUMBER: realNumber.setInputScale(scale);
+                break;
+            case DOUBLE: doubleNumber.setInputScale(scale);
+                break;
+            case FLOAT:  floatNumber.setInputScale(scale);
+                break;
+        }
+    }
+
+    public boolean isIntegerValue(){
+        switch (dataType) {
+            case LONG:
+            case INTEGER:
+            case SHORT:
+            case BYTE:return true;
+            case REAL_NUMBER:return realNumber.isIntegerValue();
+            case DOUBLE:return doubleNumber.isIntegerValue();
+            case FLOAT:return floatNumber.isIntegerValue();
+        }
+        return true;
+    }
 }

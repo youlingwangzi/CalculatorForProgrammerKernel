@@ -32,11 +32,6 @@ public class CFPFloat extends CFPRealNumber{
     }
 
     @Override
-    public String toDecString() {
-        return Float.toString(this.getBigDecimalNumber().floatValue());
-    }
-
-    @Override
     public String toOctString() {
         return Integer.toOctalString(Float.floatToIntBits(this.getBigDecimalNumber().floatValue()));
     }
@@ -56,13 +51,10 @@ public class CFPFloat extends CFPRealNumber{
         return stringBuilder.toString();
     }
 
-    @Override
-    public String toString() {
-        return this.toDecString();
-    }
-
     public CFPRealNumber toCFPRealNumber(){
-        return new CFPRealNumber(this.getBigDecimalNumber().toString());
+        CFPRealNumber cfpRealNumber = new CFPRealNumber(this.getBigDecimalNumber().toString());
+        cfpRealNumber.setInputScale(getInputScale());
+        return cfpRealNumber;
     }
 
 }
