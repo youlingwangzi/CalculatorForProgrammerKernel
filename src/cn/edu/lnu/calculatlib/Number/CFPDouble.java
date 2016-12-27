@@ -26,17 +26,17 @@ public class CFPDouble extends CFPRealNumber {
 
     @Override
     public String toHexString() {
-        return Double.toHexString(this.getBigDecimalNumber().longValue()).toUpperCase();
+        return Double.toHexString(this.getBigDecimalNumber().doubleValue()).toUpperCase();
     }
 
     @Override
     public String toOctString() {
-        return Long.toOctalString(Double.doubleToLongBits(this.getBigDecimalNumber().longValue()));
+        return Long.toOctalString(Double.doubleToLongBits(this.getBigDecimalNumber().doubleValue()));
     }
 
     @Override
     public String toBinString() {
-        return Long.toBinaryString(Double.doubleToLongBits(this.getBigDecimalNumber().longValue()));
+        return Long.toBinaryString(Double.doubleToLongBits(this.getBigDecimalNumber().doubleValue()));
     }
 
     @Override
