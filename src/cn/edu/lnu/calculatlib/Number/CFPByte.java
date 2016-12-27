@@ -193,7 +193,7 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
 
     @Override
     public CFPByte addABit(int a, int radix) {
-        this.byteNumbger = (byte)(byteNumbger*10 + a);
+        this.byteNumbger = (byte)(byteNumbger*radix + a);
         return this;
     }
 

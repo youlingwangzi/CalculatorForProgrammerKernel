@@ -174,7 +174,7 @@ public class CFPLong implements CFPBaseOperation<CFPLong>, CFPLogicOperation<CFP
 
     @Override
     public CFPLong addABit(int a, int radix) {
-        this.longNumber = longNumber*10 + a;
+        this.longNumber = longNumber*radix + a;
         return this;
     }
 

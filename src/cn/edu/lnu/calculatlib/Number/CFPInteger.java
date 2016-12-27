@@ -175,7 +175,7 @@ public class CFPInteger implements CFPBaseOperation <CFPInteger>, CFPLogicOperat
 
     @Override
     public CFPInteger addABit(int a, int radix) {
-        this.integerNumber = integerNumber*10 + a;
+        this.integerNumber = integerNumber*radix + a;
         return this;
     }
 

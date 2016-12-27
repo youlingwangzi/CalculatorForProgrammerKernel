@@ -194,7 +194,7 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
 
     @Override
     public CFPShort addABit(int a, int radix) {
-        this.shortNumber = (short)(shortNumber*10 + a);
+        this.shortNumber = (short)(shortNumber*radix + a);
         return this;
     }
 
