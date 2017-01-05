@@ -238,15 +238,23 @@ public class CFPByte implements CFPBaseOperation<CFPByte>, CFPLogicOperation<CFP
 
     @Override
     public CFPByte lsr(CFPByte a) {
-        this.byteNumbger =
-                (byte)(this.byteNumbger >>> a.getByteNumbger() | this.byteNumbger << (8 - a.getByteNumbger()));
+        StringBuilder stringBuilder = new StringBuilder(this.toFullBinatyString());
+        for(int i = 0; i < a.getByteNumbger(); i++){
+            stringBuilder.insert(0, stringBuilder.charAt(7));
+            stringBuilder.deleteCharAt(8);
+        }
+        this.parseUnsignedByte(stringBuilder.toString());
         return this;
     }
 
     @Override
     public CFPByte lsl(CFPByte a) {
-        this.byteNumbger =
-                (byte)(this.byteNumbger << a.getByteNumbger() | this.byteNumbger >>> (8 - a.getByteNumbger()));
+        StringBuilder stringBuilder = new StringBuilder(this.toFullBinatyString());
+        for(int i = 0; i < a.getByteNumbger(); i++){
+            stringBuilder.append(stringBuilder.charAt(0));
+            stringBuilder.deleteCharAt(0);
+        }
+        this.parseUnsignedByte(stringBuilder.toString());
         return this;
     }
 

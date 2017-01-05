@@ -239,15 +239,23 @@ public class CFPShort implements CFPBaseOperation<CFPShort> , CFPLogicOperation<
 
     @Override
     public CFPShort lsr(CFPShort a) {
-        this.shortNumber =
-                (short)(this.shortNumber >>> a.getShortNumber() | this.shortNumber << (16 - a.getShortNumber()));
+        StringBuilder stringBuilder = new StringBuilder(this.toFullBinatyString());
+        for(int i = 0; i < a.getShortNumber(); i++){
+            stringBuilder.insert(0, stringBuilder.charAt(15));
+            stringBuilder.deleteCharAt(16);
+        }
+        this.parseUnsignedShort(stringBuilder.toString());
         return this;
     }
 
     @Override
     public CFPShort lsl(CFPShort a) {
-        this.shortNumber =
-                (short)(this.shortNumber << a.getShortNumber() | this.shortNumber >>> (16 - a.getShortNumber()));
+        StringBuilder stringBuilder = new StringBuilder(this.toFullBinatyString());
+        for(int i = 0; i < a.getShortNumber(); i++){
+            stringBuilder.append(stringBuilder.charAt(0));
+            stringBuilder.deleteCharAt(0);
+        }
+        this.parseUnsignedShort(stringBuilder.toString());
         return this;
     }
 
