@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-这是安卓应用 `程序员计算器` 的计算内核源代码，应用`程序员计算器`
+这是安卓应用 `程序员计算器` 的计算内核源代码，应用 `程序员计算器`
 你可以在 [这里](http://app.mi.com/details?id=com.example.calculatorforprogrammer) 找到。
 
 代码提供了`long`、`int`、`short`、`byte`、`real number（实数）`、`double`、`float`
@@ -97,6 +97,16 @@ eg：`-1342.598`转换为`-10100111110.10011001000101101……`；
 则会将b的类型强制转换为a的类型参与运算。
 
 ## 更新日志
+
+### 1.0.0
+
+1. `RealNumber` 类添加参数为 `BigDecimal` 的构造函数。
+2. 修复实数类型处罚结果时循环小数时的错误。
+3. 修复 `CFPByte`、`CFPShort` 数据类型循环位移运算错误。
+4. 修复 `CFPDouble` 数据类型转换错误。
+5. 修复 `addABit` 函数不同进制错误。
+6. `CFPDouble`、`CFPFloat` 类十进制数据输出改为实数输出。
+7. `CFPRealNumber` 类修复小数逐位输入的问题。
 
 ### 0.9.8beta
 
