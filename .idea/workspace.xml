@@ -100,9 +100,14 @@
           <file leaf-file-name="CFPRealNumber.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="400" column="52" lean-forward="false" selection-start-line="400" selection-start-column="52" selection-end-line="400" selection-end-column="52" />
-                  <folding />
+                <state relative-caret-position="420">
+                  <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+                  <folding>
+                    <element signature="e#828#829#0" expanded="true" />
+                    <element signature="e#880#881#0" expanded="true" />
+                    <element signature="e#982#983#0" expanded="true" />
+                    <element signature="e#1045#1046#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -141,7 +146,7 @@
           <file leaf-file-name="CFPShort.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
+                <state relative-caret-position="3630">
                   <caret line="256" column="9" lean-forward="false" selection-start-line="256" selection-start-column="9" selection-end-line="256" selection-end-column="9" />
                   <folding />
                 </state>
@@ -211,13 +216,13 @@
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPBaseOperation.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/overview.html" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/CFPNumber.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPFloat.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPInteger.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPDouble.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPLong.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPByte.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java" />
       </list>
     </option>
   </component>
@@ -687,13 +692,6 @@
       <option name="presentableId" value="Default" />
       <updated>1475246752447</updated>
     </task>
-    <task id="LOCAL-00001" summary="完成类图，完善类包">
-      <created>1480651441502</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1480651441502</updated>
-    </task>
     <task id="LOCAL-00002" summary="完成CFPInteger类。">
       <created>1480669212833</created>
       <option name="number" value="00002" />
@@ -1030,7 +1028,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483580268960</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="修复实数类型除法结果是循环小数时的错误。">
+      <created>1483580578495</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1483580578496</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1117,7 +1122,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="### 0.9.3beta&#10;1. `CFPNumber` 类增加 ` public CFPNumber setNumber(String s)`、`public CFPNumber setDataType(CFPDataType dataType)` 方法。" />
     <MESSAGE value="修正readme文字排版错误。" />
     <MESSAGE value="更新API文档概览。" />
     <MESSAGE value="### 0.9.4beta&#10;1. `CFPNumber` 类增加 `public CFPDataType getDataType()` 函数。&#10;2. `CFPBaseOperation` 接口增加 `int compareTo(T a)` 函数，相关类已全部实现该操作。&#10;3. 增加 `CFPNonsupportedOperation` 异常，当对于 `CFPNumber` &#10;对象数据类型设置为非整数类型，且试图执行不支持的逻辑运算操作时，抛出此异常。&#10;4. `CFPNumber` 类做双目运算时加入数据类型转换。" />
@@ -1142,7 +1146,8 @@
     <MESSAGE value="修复addABit函数问题。" />
     <MESSAGE value="修复双精度浮点型类型转换问题" />
     <MESSAGE value="修复byte short数据类型，循环位移错误。" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复byte short数据类型，循环位移错误。" />
+    <MESSAGE value="修复实数类型除法结果是循环小数时的错误。" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复实数类型除法结果是循环小数时的错误。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1459,7 +1464,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPShort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="3630">
           <caret line="256" column="9" lean-forward="false" selection-start-line="256" selection-start-column="9" selection-end-line="256" selection-end-column="9" />
           <folding />
         </state>
@@ -1483,9 +1488,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/lnu/calculatlib/Number/CFPRealNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="400" column="52" lean-forward="false" selection-start-line="400" selection-start-column="52" selection-end-line="400" selection-end-column="52" />
-          <folding />
+        <state relative-caret-position="420">
+          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+          <folding>
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -46,6 +46,14 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
     }
 
     /**
+     * 构造函数。
+     * @param s BigDecimal 类型数据
+     */
+    public CFPRealNumber(BigDecimal s){
+        bigDecimalNumber = new BigDecimal(s.toString());
+    }
+
+    /**
      * 克隆函数。
      * @return 克隆后的对象
      * @throws CloneNotSupportedException 当不支持克隆操作的时候抛出此异常
