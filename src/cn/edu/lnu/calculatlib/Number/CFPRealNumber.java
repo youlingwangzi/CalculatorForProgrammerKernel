@@ -378,7 +378,11 @@ public class CFPRealNumber implements CFPBaseOperation<CFPRealNumber>, CFPRadixC
         if(a.getBigDecimalNumber().compareTo(BigDecimal.ZERO) == 0){
             throw new CFPDivZeroExceptiion();
         }
-        this.bigDecimalNumber = this.bigDecimalNumber.divide(a.getBigDecimalNumber());
+        try {
+            this.bigDecimalNumber = this.bigDecimalNumber.divide(a.getBigDecimalNumber());
+        }catch (ArithmeticException e){
+            this.bigDecimalNumber = this.bigDecimalNumber.divide(a.getBigDecimalNumber(),20,BigDecimal.ROUND_HALF_UP );
+        }
         return this;
     }
 
