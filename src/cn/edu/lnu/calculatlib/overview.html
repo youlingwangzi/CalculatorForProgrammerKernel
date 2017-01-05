@@ -59,14 +59,14 @@
 </head>
 <body>
 应用【程序员计算器】的计算内核，他提供了各种数据类型的进制转换、基础运算、部分数据类型逻辑运算的操作。</br>
-<div class="markdown-body ng-scope">文档生成时间：<code>Mon, 23 Dec 2016 18:00 UTC+8:00</code></div>
+<div class="markdown-body ng-scope">文档生成时间：<code>Thu, 05 Jan 2017 10:37 UTC+8:00</code></div>
 @version 1.0.0
 @author youlingwangzi
 
 <div class="blobmd">
     <!-- ngIf: readme.previewed --><div class="markdown-body ng-scope" ng-if="readme.previewed" cg-highlight="readme.preview" clip-copy-code="pre"><h1 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-cheng-xu-yuan-ji-suan-qi-ji-suan-nei-he" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-cheng-xu-yuan-ji-suan-qi-ji-suan-nei-he" rel="nofollow noopener noreferrer"></a>程序员计算器计算内核</h1>
     <h2 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-xiang-mu-jian-jie" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-xiang-mu-jian-jie" rel="nofollow noopener noreferrer"></a>项目简介</h2>
-    <p class="ng-scope">这是安卓应用 <code>程序员计算器</code> 的计算内核源代码，应用<code>程序员计算器</code> 你可以在 <a href="http://app.mi.com/details?id=com.example.calculatorforprogrammer" rel="nofollow noopener noreferrer">这里</a> 找到。</p>
+    <p class="ng-scope">这是安卓应用 <code>程序员计算器</code> 的计算内核源代码，应用 <code>程序员计算器</code> 你可以在 <a href="http://app.mi.com/details?id=com.example.calculatorforprogrammer" rel="nofollow noopener noreferrer">这里</a> 找到。</p>
     <p class="ng-scope">代码提供了<code>long</code>、<code>int</code>、<code>short</code>、<code>byte</code>、<code>real number（实数）</code>、<code>double</code>、<code>float</code> 七种数据类型的进制转换、基础算术运算和部分数据类型的逻辑运算操作。并且支持在七种数据类型之间转换。</p>
     <p class="ng-scope">详细API目录参见：<a href="http://yuanxiaokun.xyz/cfp_kernel_doc/" rel="nofollow noopener noreferrer">CFP_Kernel_Document</a>。</p>
     <h2 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-lei-xing-jian-jie" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-lei-xing-jian-jie" rel="nofollow noopener noreferrer"></a>类型简介</h2>
@@ -124,6 +124,16 @@
         <li>当两个 <code>CFPNumber</code> 类对象进行基本算术运算或者逻辑运算时，如果两个对象数据类型不同， 则会将被作为传入参数的对象的数据类型强制转换为调用者的类型。eg：a.add(b)，如果a、b类型不同， 则会将b的类型强制转换为a的类型参与运算。</li>
     </ul>
     <h2 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-geng-xin-ri-zhi" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-geng-xin-ri-zhi" rel="nofollow noopener noreferrer"></a>更新日志</h2>
+    <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-section" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-section" rel="nofollow noopener noreferrer"></a>1.0.0</h3>
+    <ol class="ng-scope">
+        <li><code>RealNumber</code> 类添加参数为 <code>BigDecimal</code> 的构造函数。</li>
+        <li>修复实数类型处罚结果时循环小数时的错误。</li>
+        <li>修复 <code>CFPByte</code>、<code>CFPShort</code> 数据类型循环位移运算错误。</li>
+        <li>修复 <code>CFPDouble</code> 数据类型转换错误。</li>
+        <li>修复 <code>addABit</code> 函数不同进制错误。</li>
+        <li><code>CFPDouble</code>、<code>CFPFloat</code> 类十进制数据输出改为实数输出。</li>
+        <li><code>CFPRealNumber</code> 类修复小数逐位输入的问题。</li>
+    </ol>
     <h3 class="ng-scope"><a class="coding icon coding-anchor" id="user-content-beta" href="/u/youlingwangzi/p/CalculatorForProgrammerKernel/git#user-content-beta" rel="nofollow noopener noreferrer"></a>0.9.8beta</h3>
     <ol class="ng-scope">
         <li>在 <code>CFPBaseOperation</code> 接口增加 <code>addABit</code> <code>deleteABit</code> 函数。整数按照进制直接增加减，小数只能 十进制增加减一位。</li>
