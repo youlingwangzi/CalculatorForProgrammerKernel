@@ -3,9 +3,6 @@ import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
 import cn.edu.lnu.calculatlib.CFPNumber;
 import cn.edu.lnu.calculatlib.Number.*;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-
 public class Test {
 
     public static void main(String[] args) {
@@ -143,6 +140,6 @@ public class Test {
             e.printStackTrace();
         }
         aNumber.setNumber("15");
-        System.out.println("a:"+aNumber.toDecString()+"  b:"+bNumber.toDecString());
+        System.out.println("a:"+aNumber.toDecString()+"  kkkkkkkkb:"+bNumber.toDecString());
     }
 }
