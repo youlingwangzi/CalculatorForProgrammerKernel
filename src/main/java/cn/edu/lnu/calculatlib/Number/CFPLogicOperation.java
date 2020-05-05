@@ -4,8 +4,8 @@ import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
 import cn.edu.lnu.calculatlib.CFPNonsupportedOperation;
 
 /**
- * 逻辑运算定义接口。</br>
- * 该接口定义了九种逻辑运算。</br>
+ * 逻辑运算定义接口。<br>
+ * 该接口定义了九种逻辑运算。<br>
  * Created by youlingwangzi on 2016/12/2.
  * youlingwangzi
  */
@@ -37,10 +37,10 @@ public interface CFPLogicOperation<T> {
     T xor(T a) throws CFPNonsupportedOperation;
 
     /**
-     * 与运算，置this的值为this&a，并返回this&a的值。
+     * 与运算，置this的值为this&amp;a，并返回this&amp;a的值。
      * @param a 要进行与运算的值
      * @throws CFPNonsupportedOperation 当不支持该操作的数据类型调用该操作时抛出此异常
-     * @return this&a的值
+     * @return this&amp;a的值
      */
     T and(T a) throws CFPNonsupportedOperation;
 

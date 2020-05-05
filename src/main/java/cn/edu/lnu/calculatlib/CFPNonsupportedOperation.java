@@ -1,7 +1,7 @@
 package cn.edu.lnu.calculatlib;
 
 /**
- * 当所选择的数据类型调用了不支持的操作时抛出此异常。</br>
+ * 当所选择的数据类型调用了不支持的操作时抛出此异常。<br>
  * Created by youlingwangzi on 2016/12/6.
  * @author youlingwangzi
  */

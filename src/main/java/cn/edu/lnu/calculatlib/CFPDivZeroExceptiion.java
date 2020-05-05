@@ -1,7 +1,7 @@
 package cn.edu.lnu.calculatlib;
 
 /**
- * 除数为零时抛出此异常。</br>
+ * 除数为零时抛出此异常。<br>
  * Created by youlingwangzi on 2016/12/6.
  * @author youlingwangzi
  */

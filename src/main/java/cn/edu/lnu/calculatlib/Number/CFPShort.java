@@ -3,7 +3,7 @@ package cn.edu.lnu.calculatlib.Number;
 import cn.edu.lnu.calculatlib.CFPDivZeroExceptiion;
 
 /**
- * Short类型封装类，提供了Short类型基础的进制转换、运算等操作。</br>
+ * Short类型封装类，提供了Short类型基础的进制转换、运算等操作。<br>
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */

@@ -3,7 +3,7 @@ package cn.edu.lnu.calculatlib;
 import cn.edu.lnu.calculatlib.Number.*;
 
 /**
- * 主数据类，可自由切换数据的数据类型，并提供不同的操作。</br>
+ * 主数据类，可自由切换数据的数据类型，并提供不同的操作。<br>
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */

@@ -1,7 +1,7 @@
 package cn.edu.lnu.calculatlib;
 
 /**
- * 数据类型枚举类。定义了支持的所有数据类型。</br>
+ * 数据类型枚举类。定义了支持的所有数据类型。<br>
  * Created by youlingwangzi on 2016/12/2.
  * @author youlingwangzi
  */
@@ -42,7 +42,7 @@ public enum CFPDataType {
     FLOAT;
 
     /**
-     * 判定当前是否是整型。</br>
+     * 判定当前是否是整型。<br>
      * 包括Long、Integer、Short、Byte四种。
      * @return 返回bool结果
      */
@@ -51,7 +51,7 @@ public enum CFPDataType {
     }
 
     /**
-     * 判定当前是否是浮点型。</br>
+     * 判定当前是否是浮点型。<br>
      * 包括Double、Float两种。
      * @return 返回bool结果
      */
@@ -60,7 +60,7 @@ public enum CFPDataType {
     }
 
     /**
-     * 判定当前是否是实数。</br>
+     * 判定当前是否是实数。<br>
      * 包括RealNumber一种。
      * @return 返回bool结果
      */
