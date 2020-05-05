@@ -10,11 +10,5 @@
             "request": "launch",
             "mainClass": "${file}"
         },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-Test",
-            "request": "launch",
-            "mainClass": "Test"
-        }
     ]
 }

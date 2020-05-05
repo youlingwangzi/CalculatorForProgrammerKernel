@@ -8,6 +8,14 @@ import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
 
+    public static void main(String [] args){
+        CalculatorTest calculatorTest = new CalculatorTest();
+        calculatorTest.shortTest();
+        calculatorTest.byteTest();
+        calculatorTest.longTest();
+        calculatorTest.integerTest();
+    }
+
     @Test
     @DisplayName("Test CFPSHort Class")
     void shortTest() {
