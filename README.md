@@ -10,6 +10,16 @@
 
 详细API目录参见：[CFP_Kernel_Document](http://yuanxiaokun.xyz/cfp_kernel_doc/)。
 
+## 编译方法
+
+克隆代码至本地。推荐使用 `Visual Studio Code` 进行开发调试，项目已经完成 `VS Code` 调试配置。需要安装相关 `Java` 调试插件。
+
+项目使用 `Gradle` 进行构建。已适配 `Gradle Wrapper` ，在需要编译时运行 `gradlew build` 进行编译。会生成对应的 `jar` 包。
+
+同时支持 `javadoc` 文档生成，需要时运行 `gradlew javadoc` 即可生成 API 文档。
+
+同时编写了 `JUnit` 测试单元文档，在需要时运行 `gradlew test` 即可进行用例测试。在修改源码后，强烈建议同时编写对应的测试用例。
+
 ## 类型简介
 
 - `CFPNumber` 类
