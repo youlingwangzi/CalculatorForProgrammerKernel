@@ -277,6 +277,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case INTEGER:  integerNumBer.parseUnsignedInt(s); break;
             case SHORT:      shortNumber.parseUnsignedShort(s); break;
             case BYTE:        byteNumber.parseUnsignedByte(s); break;
+            default: break;
         }
         return this;
     }
@@ -294,6 +295,8 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case INTEGER:  integerNumBer.mod(a.getIntegerNumBer()); break;
             case SHORT:      shortNumber.mod(a.getShortNumber()); break;
             case BYTE:        byteNumber.mod(a.getByteNumber()); break;
+            default: throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 mod 操作。");
+
         }
         return this;
     }
@@ -311,6 +314,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case INTEGER:  integerNumBer.or(a.getIntegerNumBer()); break;
             case SHORT:      shortNumber.or(a.getShortNumber()); break;
             case BYTE:        byteNumber.or(a.getByteNumber()); break;
+            default: throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 or 操作。");
         }
         return this;
     }
@@ -328,6 +332,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case INTEGER:  integerNumBer.xor(a.getIntegerNumBer()); break;
             case SHORT:      shortNumber.xor(a.getShortNumber()); break;
             case BYTE:        byteNumber.xor(a.getByteNumber()); break;
+            default: throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 xor 操作。");
         }
         return this;
     }
@@ -345,6 +350,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case INTEGER:  integerNumBer.and(a.getIntegerNumBer()); break;
             case SHORT:      shortNumber.and(a.getShortNumber()); break;
             case BYTE:        byteNumber.and(a.getByteNumber()); break;
+            default: throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 and 操作。");
         }
         return this;
     }
@@ -359,6 +365,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case INTEGER:  integerNumBer.not(); break;
             case SHORT:      shortNumber.not(); break;
             case BYTE:        byteNumber.not(); break;
+            default: throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 not 操作。");
         }
         return this;
     }
@@ -376,6 +383,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case INTEGER:  integerNumBer.lsl(a.getIntegerNumBer()); break;
             case SHORT:      shortNumber.lsl(a.getShortNumber()); break;
             case BYTE:        byteNumber.lsl(a.getByteNumber()); break;
+            default: throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 lsl 操作。");
         }
         return this;
     }
@@ -393,6 +401,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case INTEGER:  integerNumBer.lsr(a.getIntegerNumBer()); break;
             case SHORT:      shortNumber.lsr(a.getShortNumber()); break;
             case BYTE:         byteNumber.lsr(a.getByteNumber()); break;
+            default: throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 lsr 操作。");
         }
         return this;
     }
@@ -410,6 +419,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case INTEGER:  integerNumBer.sl(a.getIntegerNumBer()); break;
             case SHORT:      shortNumber.sl(a.getShortNumber()); break;
             case BYTE:        byteNumber.sl(a.getByteNumber()); break;
+            default: throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 sl 操作。");
         }
         return this;
     }
@@ -427,6 +437,7 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case INTEGER:  integerNumBer.sr(a.getIntegerNumBer()); break;
             case SHORT:      shortNumber.sr(a.getShortNumber()); break;
             case BYTE:        byteNumber.sr(a.getByteNumber()); break;
+            default: throw new CFPNonsupportedOperation(this.dataType.toString() + "不能执行 sr 操作。");
         }
         return this;
     }
@@ -652,6 +663,8 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case BYTE:          realNumber = byteNumber.toCFPRealNumber();break;
             case DOUBLE:        realNumber = doubleNumber.toCFPRealNumber();break;
             case FLOAT:         realNumber = floatNumber.toCFPRealNumber();break;
+            case REAL_NUMBER:
+            default: break;
         }
         dataType = CFPDataType.REAL_NUMBER;
         return this;
@@ -695,6 +708,8 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
                 break;
             case FLOAT: result = floatNumber.getInputScale();
                 break;
+            default:
+                break;
         }
         return result;
     }
@@ -710,6 +725,8 @@ public class CFPNumber implements CFPBaseOperation<CFPNumber>, CFPLogicOperation
             case DOUBLE: doubleNumber.setInputScale(scale);
                 break;
             case FLOAT:  floatNumber.setInputScale(scale);
+                break;
+            default:
                 break;
         }
     }

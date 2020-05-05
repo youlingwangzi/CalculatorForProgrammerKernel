@@ -7,6 +7,11 @@ package cn.edu.lnu.calculatlib;
  */
 public class CFPNonsupportedOperation extends Exception {
     /**
+     * use serialVersionUID
+     */
+    private static final long serialVersionUID = -7399789667315708183L;
+
+    /**
      * 存储具体错误信息
      */
     private String info;
